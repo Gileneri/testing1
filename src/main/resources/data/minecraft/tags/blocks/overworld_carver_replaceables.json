@@ -1,0 +1,13 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:tuff",
+    "minecraft:andesite",
+    "minecraft:cobblestone",
+    "minecraft:sand",
+    "minecraft:moss_block",
+    "minecraft:mossy_cobblestone",
+    "minecraft:blackstone",
+    "minecraft:gravel"
+  ]
+}

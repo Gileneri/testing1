@@ -1,0 +1,17 @@
+{
+  "block.test.texture": "Texture",
+  "effect.test.poisoned": "Poisoned",
+  "biome.test.oceantrent": "Oceantrent",
+  "item.test.biomes_4": "blabla",
+  "biome.test.ocean_1": "Ocean 1",
+  "block.test.poison": "Poison",
+  "item.test.testnoise": "Testnoise Portal Igniter",
+  "biome.test.ocean": "Ocean",
+  "item.test.higher": "Higher Portal Igniter",
+  "biome.test.noise": "Noise mountain",
+  "item.test.poison_bucket": "Measure of Poison",
+  "item.test.mattermanipulatorbeta": "Matter manipulator beta",
+  "death.attack.poison": "Was poisoned",
+  "fluid.test.poison": "Poison",
+  "biome.test.noise_1": "Noise 1"
+}
