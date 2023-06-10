@@ -13,12 +13,14 @@ import net.minecraft.world.entity.ai.attributes.AttributeModifier;
 import net.minecraft.world.entity.ai.attributes.Attribute;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.EquipmentSlot;
+import net.minecraft.world.entity.Entity;
 import net.minecraft.world.InteractionResultHolder;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.network.chat.Component;
 import net.minecraft.core.BlockPos;
 
-import net.mcreator.test.procedures.Mattermanipulator1Procedure;
+import net.mcreator.test.procedures.MMWhenInHandTickProcedure;
+import net.mcreator.test.procedures.MMOnRightClickProcedure;
 
 import java.util.List;
 
@@ -50,7 +52,7 @@ public class MattermanipulatorbetaItem extends Item {
 	@Override
 	public InteractionResultHolder<ItemStack> use(Level world, Player entity, InteractionHand hand) {
 		InteractionResultHolder<ItemStack> ar = super.use(world, entity, hand);
-		Mattermanipulator1Procedure.execute(world, entity.getX(), entity.getY(), entity.getZ(), entity);
+		MMOnRightClickProcedure.execute(world, entity.getX(), entity.getY(), entity.getZ(), entity, ar.getObject());
 		return ar;
 	}
 
@@ -74,8 +76,20 @@ public class MattermanipulatorbetaItem extends Item {
 	@Override
 	public void appendHoverText(ItemStack itemstack, Level world, List<Component> list, TooltipFlag flag) {
 		super.appendHoverText(itemstack, world, list, flag);
-		list.add(Component.literal("teste"));
-		list.add(Component.literal("test"));
-		list.add(Component.literal("test"));
+		list.add(Component.literal("Liquid Upgrade: False"));
+		list.add(Component.literal("Paint Upgrade: False"));
+		list.add(Component.literal("Wiring Upgrade: False"));
+		list.add(Component.literal("Radius Level: 0 (1x1x1)"));
+		list.add(Component.literal("Power Level: 0 (100%)"));
+		list.add(Component.literal("Range Level: 0 (10)"));
+		list.add(Component.literal("(I don't know how to change this"));
+		list.add(Component.literal("information as you upgrade it!)"));
+	}
+
+	@Override
+	public void inventoryTick(ItemStack itemstack, Level world, Entity entity, int slot, boolean selected) {
+		super.inventoryTick(itemstack, world, entity, slot, selected);
+		if (selected)
+			MMWhenInHandTickProcedure.execute(world, entity, itemstack);
 	}
 }

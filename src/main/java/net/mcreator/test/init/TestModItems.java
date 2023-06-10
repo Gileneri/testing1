@@ -17,6 +17,7 @@ import net.mcreator.test.item.TestnoiseItem;
 import net.mcreator.test.item.PoisonItem;
 import net.mcreator.test.item.MattermanipulatorbetaItem;
 import net.mcreator.test.item.HigherItem;
+import net.mcreator.test.item.DebugTestToolItem;
 import net.mcreator.test.item.Biomes4Item;
 import net.mcreator.test.TestMod;
 
@@ -28,6 +29,7 @@ public class TestModItems {
 	public static final RegistryObject<Item> TESTNOISE = REGISTRY.register("testnoise", () -> new TestnoiseItem());
 	public static final RegistryObject<Item> BIOMES_4 = REGISTRY.register("biomes_4", () -> new Biomes4Item());
 	public static final RegistryObject<Item> TEXTURE = block(TestModBlocks.TEXTURE, CreativeModeTab.TAB_BUILDING_BLOCKS);
+	public static final RegistryObject<Item> DEBUG_TEST_TOOL = REGISTRY.register("debug_test_tool", () -> new DebugTestToolItem());
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block, CreativeModeTab tab) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties().tab(tab)));
