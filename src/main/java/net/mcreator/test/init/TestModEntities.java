@@ -31,8 +31,6 @@ public class TestModEntities {
 			EntityType.Builder.<MechTestBodyEntity>of(MechTestBodyEntity::new, MobCategory.MISC).setShouldReceiveVelocityUpdates(true).setTrackingRange(128).setUpdateInterval(3).setCustomClientFactory(MechTestBodyEntity::new)
 
 					.sized(3f, 4f));
-	public static final RegistryObject<EntityType<BlockIndicatorEntity1Entity>> BLOCK_INDICATOR_ENTITY_1 = register("block_indicator_entity_1", EntityType.Builder.<BlockIndicatorEntity1Entity>of(BlockIndicatorEntity1Entity::new, MobCategory.MISC)
-			.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(BlockIndicatorEntity1Entity::new).fireImmune().sized(1.01f, 1.01f));
 	public static final RegistryObject<EntityType<MechTestArmLeftEntity>> MECH_TEST_ARM_LEFT = register("mech_test_arm_left",
 			EntityType.Builder.<MechTestArmLeftEntity>of(MechTestArmLeftEntity::new, MobCategory.MISC).setShouldReceiveVelocityUpdates(true).setTrackingRange(128).setUpdateInterval(3).setCustomClientFactory(MechTestArmLeftEntity::new)
 
@@ -49,6 +47,8 @@ public class TestModEntities {
 			EntityType.Builder.<MechTestLegRightEntity>of(MechTestLegRightEntity::new, MobCategory.MISC).setShouldReceiveVelocityUpdates(true).setTrackingRange(128).setUpdateInterval(3).setCustomClientFactory(MechTestLegRightEntity::new)
 
 					.sized(0.3f, 2.5f));
+	public static final RegistryObject<EntityType<BlockIndicatorEntity1Entity>> BLOCK_INDICATOR_ENTITY_1 = register("block_indicator_entity_1", EntityType.Builder.<BlockIndicatorEntity1Entity>of(BlockIndicatorEntity1Entity::new, MobCategory.MISC)
+			.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(BlockIndicatorEntity1Entity::new).fireImmune().sized(1.01f, 1.01f));
 
 	private static <T extends Entity> RegistryObject<EntityType<T>> register(String registryname, EntityType.Builder<T> entityTypeBuilder) {
 		return REGISTRY.register(registryname, () -> (EntityType<T>) entityTypeBuilder.build(registryname));
@@ -58,21 +58,21 @@ public class TestModEntities {
 	public static void init(FMLCommonSetupEvent event) {
 		event.enqueueWork(() -> {
 			MechTestBodyEntity.init();
-			BlockIndicatorEntity1Entity.init();
 			MechTestArmLeftEntity.init();
 			MechTestArmRightEntity.init();
 			MechTestLegLeftEntity.init();
 			MechTestLegRightEntity.init();
+			BlockIndicatorEntity1Entity.init();
 		});
 	}
 
 	@SubscribeEvent
 	public static void registerAttributes(EntityAttributeCreationEvent event) {
 		event.put(MECH_TEST_BODY.get(), MechTestBodyEntity.createAttributes().build());
-		event.put(BLOCK_INDICATOR_ENTITY_1.get(), BlockIndicatorEntity1Entity.createAttributes().build());
 		event.put(MECH_TEST_ARM_LEFT.get(), MechTestArmLeftEntity.createAttributes().build());
 		event.put(MECH_TEST_ARM_RIGHT.get(), MechTestArmRightEntity.createAttributes().build());
 		event.put(MECH_TEST_LEG_LEFT.get(), MechTestLegLeftEntity.createAttributes().build());
 		event.put(MECH_TEST_LEG_RIGHT.get(), MechTestLegRightEntity.createAttributes().build());
+		event.put(BLOCK_INDICATOR_ENTITY_1.get(), BlockIndicatorEntity1Entity.createAttributes().build());
 	}
 }

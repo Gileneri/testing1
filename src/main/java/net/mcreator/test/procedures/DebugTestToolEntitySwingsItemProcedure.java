@@ -1,12 +1,8 @@
 package net.mcreator.test.procedures;
 
-import net.minecraftforge.registries.ForgeRegistries;
+import net.minecraftforge.eventbus.api.Event;
 
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.entity.LivingEntity;
-import net.minecraft.world.entity.Entity;
-
-import net.mcreator.test.TestMod;
+import javax.annotation.Nullable;
 
 public class DebugTestToolEntitySwingsItemProcedure {
 	public static void execute(Entity entity) {

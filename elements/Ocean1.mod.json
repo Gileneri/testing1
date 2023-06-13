@@ -44,15 +44,15 @@
       "max": 0.5
     },
     "genContinentalness": {
-      "min": -0.9998,
-      "max": -0.9997
+      "min": -1.0,
+      "max": -0.16
     },
     "genErosion": {
       "min": 0.9999,
       "max": 0.9999
     },
     "genWeirdness": {
-      "min": -1.0,
+      "min": 0.35,
       "max": 1.0
     },
     "grassPerChunk": 0,

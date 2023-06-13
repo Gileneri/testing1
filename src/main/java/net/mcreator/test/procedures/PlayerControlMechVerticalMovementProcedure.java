@@ -1,14 +1,6 @@
 package net.mcreator.test.procedures;
 
-import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.eventbus.api.Event;
-import net.minecraftforge.event.TickEvent;
-
-import net.minecraft.world.phys.Vec3;
-import net.minecraft.world.entity.Entity;
-
-import net.mcreator.test.entity.MechTestBodyEntity;
 
 import javax.annotation.Nullable;
 

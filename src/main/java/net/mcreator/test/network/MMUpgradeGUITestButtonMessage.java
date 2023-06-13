@@ -1,36 +1,9 @@
 
 package net.mcreator.test.network;
 
-import net.minecraftforge.network.NetworkEvent;
-import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
-import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-
-import net.minecraft.world.level.Level;
-import net.minecraft.world.entity.player.Player;
-import net.minecraft.network.FriendlyByteBuf;
-import net.minecraft.core.BlockPos;
-
-import net.mcreator.test.world.inventory.MMUpgradeGUITestMenu;
-import net.mcreator.test.procedures.MMUpgradeGUIButtonWhenClicked9Procedure;
-import net.mcreator.test.procedures.MMUpgradeGUIButtonWhenClicked8Procedure;
-import net.mcreator.test.procedures.MMUpgradeGUIButtonWhenClicked7Procedure;
-import net.mcreator.test.procedures.MMUpgradeGUIButtonWhenClicked6Procedure;
-import net.mcreator.test.procedures.MMUpgradeGUIButtonWhenClicked5Procedure;
-import net.mcreator.test.procedures.MMUpgradeGUIButtonWhenClicked4Procedure;
-import net.mcreator.test.procedures.MMUpgradeGUIButtonWhenClicked3Procedure;
-import net.mcreator.test.procedures.MMUpgradeGUIButtonWhenClicked2Procedure;
-import net.mcreator.test.procedures.MMUpgradeGUIButtonWhenClicked1Procedure;
-import net.mcreator.test.procedures.MMUpgradeGUIButtonWhenClicked12Procedure;
-import net.mcreator.test.procedures.MMUpgradeGUIButtonWhenClicked11Procedure;
-import net.mcreator.test.procedures.MMUpgradeGUIButtonWhenClicked10Procedure;
-import net.mcreator.test.TestMod;
-
-import java.util.function.Supplier;
-import java.util.HashMap;
-
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
 public class MMUpgradeGUITestButtonMessage {
+
 	private final int buttonID, x, y, z;
 
 	public MMUpgradeGUITestButtonMessage(FriendlyByteBuf buffer) {
@@ -62,6 +35,7 @@ public class MMUpgradeGUITestButtonMessage {
 			int x = message.x;
 			int y = message.y;
 			int z = message.z;
+
 			handleButtonAction(entity, buttonID, x, y, z);
 		});
 		context.setPacketHandled(true);
@@ -70,56 +44,58 @@ public class MMUpgradeGUITestButtonMessage {
 	public static void handleButtonAction(Player entity, int buttonID, int x, int y, int z) {
 		Level world = entity.level;
 		HashMap guistate = MMUpgradeGUITestMenu.guistate;
+
 		// security measure to prevent arbitrary chunk generation
 		if (!world.hasChunkAt(new BlockPos(x, y, z)))
 			return;
+
 		if (buttonID == 0) {
 
-			MMUpgradeGUIButtonWhenClicked1Procedure.execute(world, entity);
+			MMUpgradeGUIButtonWhenClicked1Procedure.execute();
 		}
 		if (buttonID == 1) {
 
-			MMUpgradeGUIButtonWhenClicked2Procedure.execute(world, entity);
+			MMUpgradeGUIButtonWhenClicked2Procedure.execute();
 		}
 		if (buttonID == 2) {
 
-			MMUpgradeGUIButtonWhenClicked3Procedure.execute(world, entity);
+			MMUpgradeGUIButtonWhenClicked3Procedure.execute();
 		}
 		if (buttonID == 3) {
 
-			MMUpgradeGUIButtonWhenClicked4Procedure.execute(world, entity);
+			MMUpgradeGUIButtonWhenClicked4Procedure.execute();
 		}
 		if (buttonID == 4) {
 
-			MMUpgradeGUIButtonWhenClicked5Procedure.execute(world, entity);
+			MMUpgradeGUIButtonWhenClicked5Procedure.execute();
 		}
 		if (buttonID == 5) {
 
-			MMUpgradeGUIButtonWhenClicked6Procedure.execute(world, entity);
+			MMUpgradeGUIButtonWhenClicked6Procedure.execute();
 		}
 		if (buttonID == 6) {
 
-			MMUpgradeGUIButtonWhenClicked7Procedure.execute(world, entity);
+			MMUpgradeGUIButtonWhenClicked7Procedure.execute();
 		}
 		if (buttonID == 7) {
 
-			MMUpgradeGUIButtonWhenClicked8Procedure.execute(world, entity);
+			MMUpgradeGUIButtonWhenClicked8Procedure.execute();
 		}
 		if (buttonID == 8) {
 
-			MMUpgradeGUIButtonWhenClicked9Procedure.execute(world, entity);
+			MMUpgradeGUIButtonWhenClicked9Procedure.execute();
 		}
 		if (buttonID == 9) {
 
-			MMUpgradeGUIButtonWhenClicked10Procedure.execute(world, entity);
+			MMUpgradeGUIButtonWhenClicked10Procedure.execute();
 		}
 		if (buttonID == 10) {
 
-			MMUpgradeGUIButtonWhenClicked11Procedure.execute(world, entity);
+			MMUpgradeGUIButtonWhenClicked11Procedure.execute();
 		}
 		if (buttonID == 11) {
 
-			MMUpgradeGUIButtonWhenClicked12Procedure.execute(world, entity);
+			MMUpgradeGUIButtonWhenClicked12Procedure.execute();
 		}
 	}
 
@@ -127,4 +103,5 @@ public class MMUpgradeGUITestButtonMessage {
 	public static void registerMessage(FMLCommonSetupEvent event) {
 		TestMod.addNetworkMessage(MMUpgradeGUITestButtonMessage.class, MMUpgradeGUITestButtonMessage::buffer, MMUpgradeGUITestButtonMessage::new, MMUpgradeGUITestButtonMessage::handler);
 	}
+
 }

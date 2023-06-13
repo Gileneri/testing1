@@ -2,7 +2,7 @@
   "type": "test:biomes_4",
   "generator": {
     "type": "minecraft:noise",
-    "seed": -761524346419117440,
+    "seed": 2080936865973739954,
     "biome_source": {
       "type": "minecraft:multi_noise",
       "biomes": [
@@ -18,12 +18,12 @@
               -0.9999
             ],
             "continentalness": [
-              0.9999,
+              -0.16,
               1
             ],
             "weirdness": [
               -1,
-              1
+              -0.35
             ],
             "erosion": [
               -1.0001,
@@ -46,10 +46,10 @@
             ],
             "continentalness": [
               -1,
-              1
+              -0.16
             ],
             "weirdness": [
-              -1,
+              0.35,
               1
             ],
             "erosion": [

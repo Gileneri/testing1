@@ -21,10 +21,10 @@ public class TestModEntityRenderers {
 	@SubscribeEvent
 	public static void registerEntityRenderers(EntityRenderersEvent.RegisterRenderers event) {
 		event.registerEntityRenderer(TestModEntities.MECH_TEST_BODY.get(), MechTestBodyRenderer::new);
-		event.registerEntityRenderer(TestModEntities.BLOCK_INDICATOR_ENTITY_1.get(), BlockIndicatorEntity1Renderer::new);
 		event.registerEntityRenderer(TestModEntities.MECH_TEST_ARM_LEFT.get(), MechTestArmLeftRenderer::new);
 		event.registerEntityRenderer(TestModEntities.MECH_TEST_ARM_RIGHT.get(), MechTestArmRightRenderer::new);
 		event.registerEntityRenderer(TestModEntities.MECH_TEST_LEG_LEFT.get(), MechTestLegLeftRenderer::new);
 		event.registerEntityRenderer(TestModEntities.MECH_TEST_LEG_RIGHT.get(), MechTestLegRightRenderer::new);
+		event.registerEntityRenderer(TestModEntities.BLOCK_INDICATOR_ENTITY_1.get(), BlockIndicatorEntity1Renderer::new);
 	}
 }

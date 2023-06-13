@@ -1,15 +1,8 @@
 package net.mcreator.test.procedures;
 
-import net.minecraft.world.phys.Vec3;
-import net.minecraft.world.phys.AABB;
-import net.minecraft.world.level.LevelAccessor;
-import net.minecraft.world.entity.LivingEntity;
-import net.minecraft.world.entity.Entity;
-import net.minecraft.server.level.ServerPlayer;
+import net.minecraftforge.eventbus.api.Event;
 
-import net.mcreator.test.entity.MechTestBodyEntity;
-
-import java.util.Comparator;
+import javax.annotation.Nullable;
 
 public class MechTestPartsOnEntityTickUpdateProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
