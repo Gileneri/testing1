@@ -44,7 +44,7 @@
       "max": -0.9999
     },
     "genContinentalness": {
-      "min": 0.9999,
+      "min": -0.16,
       "max": 1.0
     },
     "genErosion": {
@@ -53,7 +53,7 @@
     },
     "genWeirdness": {
       "min": -1.0,
-      "max": 1.0
+      "max": -0.35
     },
     "grassPerChunk": 0,
     "seagrassPerChunk": 0,

@@ -31,6 +31,7 @@ import net.minecraft.resources.ResourceKey;
 import net.minecraft.core.Registry;
 import net.minecraft.core.Holder;
 
+import net.mcreator.test.world.biome.Plains1Biome;
 import net.mcreator.test.world.biome.OceantrentBiome;
 import net.mcreator.test.world.biome.OceanBiome;
 import net.mcreator.test.world.biome.Ocean1Biome;
@@ -54,6 +55,7 @@ public class TestModBiomes {
 	public static final RegistryObject<Biome> OCEAN = REGISTRY.register("ocean", OceanBiome::createBiome);
 	public static final RegistryObject<Biome> NOISE_1 = REGISTRY.register("noise_1", Noise1Biome::createBiome);
 	public static final RegistryObject<Biome> OCEAN_1 = REGISTRY.register("ocean_1", Ocean1Biome::createBiome);
+	public static final RegistryObject<Biome> PLAINS_1 = REGISTRY.register("plains_1", Plains1Biome::createBiome);
 
 	@SubscribeEvent
 	public static void onServerAboutToStart(ServerAboutToStartEvent event) {

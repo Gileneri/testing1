@@ -62,6 +62,7 @@
     {
       "name": "Poisoned",
       "type": "potioneffect",
+      "sortid": 23,
       "compiles": true,
       "locked_code": false,
       "registry_name": "poisoned",
@@ -148,6 +149,7 @@
     {
       "name": "Poisonoverlay",
       "type": "overlay",
+      "sortid": 24,
       "compiles": true,
       "locked_code": false,
       "registry_name": "poisonoverlay",
@@ -160,6 +162,7 @@
     {
       "name": "Toxicislands",
       "type": "feature",
+      "sortid": 25,
       "compiles": true,
       "locked_code": false,
       "registry_name": "toxicislands",
@@ -337,7 +340,7 @@
       "type": "dimension",
       "sortid": 19,
       "compiles": true,
-      "locked_code": true,
+      "locked_code": false,
       "registry_name": "biomes_4",
       "metadata": {
         "files": [
@@ -370,6 +373,19 @@
           "src/main/resources/assets/test/models/block/texture.json"
         ]
       }
+    },
+    {
+      "name": "Plains1",
+      "type": "biome",
+      "sortid": 22,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "plains_1",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/test/world/biome/Plains1Biome.java"
+        ]
+      }
     }
   ],
   "variable_elements": [],
@@ -381,6 +397,7 @@
       "biome.test.oceantrent": "Oceantrent",
       "item.test.biomes_4": "blabla",
       "biome.test.ocean_1": "Ocean 1",
+      "biome.test.plains_1": "Plains 1",
       "block.test.poison": "Poison",
       "item.test.testnoise": "Testnoise Portal Igniter",
       "biome.test.ocean": "Ocean",
