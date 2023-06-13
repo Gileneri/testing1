@@ -62,7 +62,6 @@
     {
       "name": "Poisoned",
       "type": "potioneffect",
-      "sortid": 23,
       "compiles": true,
       "locked_code": false,
       "registry_name": "poisoned",
@@ -149,7 +148,6 @@
     {
       "name": "Poisonoverlay",
       "type": "overlay",
-      "sortid": 24,
       "compiles": true,
       "locked_code": false,
       "registry_name": "poisonoverlay",
@@ -162,7 +160,6 @@
     {
       "name": "Toxicislands",
       "type": "feature",
-      "sortid": 25,
       "compiles": true,
       "locked_code": false,
       "registry_name": "toxicislands",
@@ -340,7 +337,7 @@
       "type": "dimension",
       "sortid": 19,
       "compiles": true,
-      "locked_code": false,
+      "locked_code": true,
       "registry_name": "biomes_4",
       "metadata": {
         "files": [
@@ -386,25 +383,557 @@
           "src/main/java/net/mcreator/test/world/biome/Plains1Biome.java"
         ]
       }
+    },
+    {
+      "name": "BlockIndicatorEntity1OnInitialEntitySpawn",
+      "type": "procedure",
+      "sortid": 41,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "block_indicator_entity_1_on_initial_entity_spawn",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/test/procedures/BlockIndicatorEntity1OnInitialEntitySpawnProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "BlockIndicatorEntity1",
+      "type": "livingentity",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "block_indicator_entity_1",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/test/client/renderer/BlockIndicatorEntity1Renderer.java",
+          "src/main/java/net/mcreator/test/entity/BlockIndicatorEntity1Entity.java"
+        ]
+      }
+    },
+    {
+      "name": "MMUpgradeGUIButtonsCheckPlayerForCurrency",
+      "type": "procedure",
+      "sortid": 21,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mm_upgrade_gui_buttons_check_player_for_currency",
+      "metadata": {
+        "return_type": "number",
+        "files": [
+          "src/main/java/net/mcreator/test/procedures/MMUpgradeGUIButtonsCheckPlayerForCurrencyProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "MMOnRightClick",
+      "type": "procedure",
+      "sortid": 34,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mm_on_right_click",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/test/procedures/MMOnRightClickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "MMUpgradeGUIToggleKeybind",
+      "type": "keybind",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mm_upgrade_gui_toggle_keybind",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/test/network/MMUpgradeGUIToggleKeybindMessage.java"
+        ]
+      }
+    },
+    {
+      "name": "SpiralSearchBaseProcedure",
+      "type": "procedure",
+      "sortid": 39,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "spiral_search_base_procedure",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/test/procedures/SpiralSearchBaseProcedureProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "MMUpgradeGUITest",
+      "type": "gui",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mm_upgrade_gui_test",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/test/network/MMUpgradeGUITestButtonMessage.java",
+          "src/main/java/net/mcreator/test/world/inventory/MMUpgradeGUITestMenu.java",
+          "src/main/java/net/mcreator/test/client/gui/MMUpgradeGUITestScreen.java"
+        ]
+      }
+    },
+    {
+      "name": "MMUpgradeGUIButtonWhenClicked2",
+      "type": "procedure",
+      "sortid": 23,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mm_upgrade_gui_button_when_clicked_2",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/test/procedures/MMUpgradeGUIButtonWhenClicked2Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "MMWhenInHandTick",
+      "type": "procedure",
+      "sortid": 36,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mm_when_in_hand_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/test/procedures/MMWhenInHandTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "MMUpgradeGUIButtonWhenClicked3",
+      "type": "procedure",
+      "sortid": 24,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mm_upgrade_gui_button_when_clicked_3",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/test/procedures/MMUpgradeGUIButtonWhenClicked3Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "MMUpgradeGUIButtonWhenClicked1",
+      "type": "procedure",
+      "sortid": 22,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mm_upgrade_gui_button_when_clicked_1",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/test/procedures/MMUpgradeGUIButtonWhenClicked1Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "DebugTestTool",
+      "type": "tool",
+      "sortid": 40,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "debug_test_tool",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/test/item/DebugTestToolItem.java",
+          "src/main/resources/assets/test/models/item/debug_test_tool.json"
+        ]
+      }
+    },
+    {
+      "name": "MMUpgradeGUIButtonWhenClicked10",
+      "type": "procedure",
+      "sortid": 31,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mm_upgrade_gui_button_when_clicked_10",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/test/procedures/MMUpgradeGUIButtonWhenClicked10Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "MMUpgradeGUIButtonWhenClicked8",
+      "type": "procedure",
+      "sortid": 29,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mm_upgrade_gui_button_when_clicked_8",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/test/procedures/MMUpgradeGUIButtonWhenClicked8Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "MMUpgradeGUIButtonWhenClicked9",
+      "type": "procedure",
+      "sortid": 30,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mm_upgrade_gui_button_when_clicked_9",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/test/procedures/MMUpgradeGUIButtonWhenClicked9Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "MMUpgradeGUIButtonWhenClicked6",
+      "type": "procedure",
+      "sortid": 27,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mm_upgrade_gui_button_when_clicked_6",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/test/procedures/MMUpgradeGUIButtonWhenClicked6Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "MMUpgradeGUIButtonWhenClicked7",
+      "type": "procedure",
+      "sortid": 28,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mm_upgrade_gui_button_when_clicked_7",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/test/procedures/MMUpgradeGUIButtonWhenClicked7Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "MMUpgradeGUIButtonWhenClicked4",
+      "type": "procedure",
+      "sortid": 25,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mm_upgrade_gui_button_when_clicked_4",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/test/procedures/MMUpgradeGUIButtonWhenClicked4Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "MMUpgradeGUIButtonWhenClicked11",
+      "type": "procedure",
+      "sortid": 32,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mm_upgrade_gui_button_when_clicked_11",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/test/procedures/MMUpgradeGUIButtonWhenClicked11Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "BlockIndicatorEntity1OnEntityTickUpdate",
+      "type": "procedure",
+      "sortid": 38,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "block_indicator_entity_1_on_entity_tick_update",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/test/procedures/BlockIndicatorEntity1OnEntityTickUpdateProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "MMUpgradeGUIButtonWhenClicked5",
+      "type": "procedure",
+      "sortid": 26,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mm_upgrade_gui_button_when_clicked_5",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/test/procedures/MMUpgradeGUIButtonWhenClicked5Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "MMUpgradeGUIButtonWhenClicked12",
+      "type": "procedure",
+      "sortid": 33,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mm_upgrade_gui_button_when_clicked_12",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/test/procedures/MMUpgradeGUIButtonWhenClicked12Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "MMUpgradeGUIToggleKeybindOnKeyPressed",
+      "type": "procedure",
+      "sortid": 35,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mm_upgrade_gui_toggle_keybind_on_key_pressed",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/test/procedures/MMUpgradeGUIToggleKeybindOnKeyPressedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
     }
   ],
   "variable_elements": [],
   "sound_elements": [],
   "language_map": {
     "en_us": {
-      "block.test.texture": "Texture",
       "effect.test.poisoned": "Poisoned",
+      "block.test.texture": "Texture",
       "biome.test.oceantrent": "Oceantrent",
-      "item.test.biomes_4": "blabla",
       "biome.test.ocean_1": "Ocean 1",
-      "biome.test.plains_1": "Plains 1",
       "block.test.poison": "Poison",
+      "entity.test.block_indicator_entity_1": "Block Indicator Entity 1",
+      "item.test.biomes_4": "blabla",
       "item.test.testnoise": "Testnoise Portal Igniter",
       "biome.test.ocean": "Ocean",
       "item.test.higher": "Higher Portal Igniter",
       "biome.test.noise": "Noise mountain",
       "item.test.poison_bucket": "Measure of Poison",
       "item.test.mattermanipulatorbeta": "Matter manipulator beta",
+      "item.test.block_indicator_entity_1_spawn_egg": "Block Indicator Entity 1 Spawn Egg",
       "death.attack.poison": "Was poisoned",
       "fluid.test.poison": "Poison",
       "biome.test.noise_1": "Noise 1"

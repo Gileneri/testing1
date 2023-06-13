@@ -30,10 +30,12 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.FriendlyByteBuf;
 
 import net.mcreator.test.init.TestModMobEffects;
+import net.mcreator.test.init.TestModMenus;
 import net.mcreator.test.init.TestModItems;
 import net.mcreator.test.init.TestModFluids;
 import net.mcreator.test.init.TestModFluidTypes;
 import net.mcreator.test.init.TestModFeatures;
+import net.mcreator.test.init.TestModEntities;
 import net.mcreator.test.init.TestModBlocks;
 import net.mcreator.test.init.TestModBiomes;
 
@@ -58,6 +60,7 @@ public class TestMod {
 
 		TestModBlocks.REGISTRY.register(bus);
 		TestModItems.REGISTRY.register(bus);
+		TestModEntities.REGISTRY.register(bus);
 
 		TestModFeatures.REGISTRY.register(bus);
 		TestModFluids.REGISTRY.register(bus);
@@ -65,6 +68,7 @@ public class TestMod {
 
 		TestModMobEffects.REGISTRY.register(bus);
 
+		TestModMenus.REGISTRY.register(bus);
 		TestModBiomes.REGISTRY.register(bus);
 	}
 

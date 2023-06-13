@@ -7,9 +7,14 @@
     "customModelName": "Normal",
     "name": "Matter manipulator beta",
     "specialInfo": [
-      "teste",
-      "test",
-      "test"
+      "Liquid Upgrade: False",
+      "Paint Upgrade: False",
+      "Wiring Upgrade: False",
+      "Radius Level: 0 (1x1x1)",
+      "Power Level: 0 (100%)",
+      "Range Level: 0 (10)",
+      "(I don't know how to change this",
+      "information as you upgrade it!)"
     ],
     "creativeTab": {
       "value": "TOOLS"
@@ -28,7 +33,10 @@
     "stayInGridWhenCrafting": false,
     "damageOnCrafting": false,
     "onRightClickedInAir": {
-      "name": "Mattermanipulator1"
+      "name": "MMOnRightClick"
+    },
+    "onItemInUseTick": {
+      "name": "MMWhenInHandTick"
     }
   }
 }
