@@ -15,10 +15,12 @@ import net.minecraft.world.entity.ai.attributes.AttributeModifier;
 import net.minecraft.world.entity.ai.attributes.Attribute;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.EquipmentSlot;
+import net.minecraft.world.entity.Entity;
 import net.minecraft.network.chat.Component;
 import net.minecraft.core.BlockPos;
 
 import net.mcreator.test.procedures.SpiralSearchBaseProcedureProcedure;
+import net.mcreator.test.procedures.FlashlightTestProcedure;
 
 import java.util.List;
 
@@ -76,6 +78,13 @@ public class DebugTestToolItem extends Item {
 		boolean retval = super.onEntitySwing(itemstack, entity);
 		SpiralSearchBaseProcedureProcedure.execute(entity.level, entity.getX(), entity.getY(), entity.getZ(), entity);
 		return retval;
+	}
+
+	@Override
+	public void inventoryTick(ItemStack itemstack, Level world, Entity entity, int slot, boolean selected) {
+		super.inventoryTick(itemstack, world, entity, slot, selected);
+		if (selected)
+			FlashlightTestProcedure.execute(world, entity);
 	}
 
 	@Override

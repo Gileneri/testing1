@@ -37,6 +37,7 @@ import net.mcreator.test.init.TestModFluidTypes;
 import net.mcreator.test.init.TestModFeatures;
 import net.mcreator.test.init.TestModEntities;
 import net.mcreator.test.init.TestModBlocks;
+import net.mcreator.test.init.TestModBlockEntities;
 import net.mcreator.test.init.TestModBiomes;
 
 import java.util.function.Supplier;
@@ -61,7 +62,7 @@ public class TestMod {
 		TestModBlocks.REGISTRY.register(bus);
 		TestModItems.REGISTRY.register(bus);
 		TestModEntities.REGISTRY.register(bus);
-
+		TestModBlockEntities.REGISTRY.register(bus);
 		TestModFeatures.REGISTRY.register(bus);
 		TestModFluids.REGISTRY.register(bus);
 		TestModFluidTypes.REGISTRY.register(bus);

@@ -12,6 +12,7 @@ import net.minecraft.world.level.block.Block;
 
 import net.mcreator.test.block.TextureBlock;
 import net.mcreator.test.block.TestnoisePortalBlock;
+import net.mcreator.test.block.TestLightBlockBlock;
 import net.mcreator.test.block.PoisonBlock;
 import net.mcreator.test.block.HigherPortalBlock;
 import net.mcreator.test.block.Biomes4PortalBlock;
@@ -24,4 +25,5 @@ public class TestModBlocks {
 	public static final RegistryObject<Block> TESTNOISE_PORTAL = REGISTRY.register("testnoise_portal", () -> new TestnoisePortalBlock());
 	public static final RegistryObject<Block> BIOMES_4_PORTAL = REGISTRY.register("biomes_4_portal", () -> new Biomes4PortalBlock());
 	public static final RegistryObject<Block> TEXTURE = REGISTRY.register("texture", () -> new TextureBlock());
+	public static final RegistryObject<Block> TEST_LIGHT_BLOCK = REGISTRY.register("test_light_block", () -> new TestLightBlockBlock());
 }

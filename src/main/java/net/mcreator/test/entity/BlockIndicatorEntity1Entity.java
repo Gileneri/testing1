@@ -43,8 +43,7 @@ public class BlockIndicatorEntity1Entity extends PathfinderMob {
 		xpReward = 0;
 		setNoAi(true);
 		setPersistenceRequired();
-
-		this.noPhysics = true; //ADDED
+      	this.noPhysics = true; //ADDED
       	this.setNoGravity(true); //ADDED
 	}
 
