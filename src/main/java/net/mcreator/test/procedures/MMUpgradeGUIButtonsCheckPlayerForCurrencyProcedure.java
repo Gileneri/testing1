@@ -1,8 +1,15 @@
 package net.mcreator.test.procedures;
 
-import net.minecraftforge.eventbus.api.Event;
+import net.minecraftforge.items.IItemHandler;
+import net.minecraftforge.common.capabilities.ForgeCapabilities;
 
-import javax.annotation.Nullable;
+import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.LevelAccessor;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.entity.Entity;
+
+import java.util.concurrent.atomic.AtomicReference;
 
 public class MMUpgradeGUIButtonsCheckPlayerForCurrencyProcedure {
 	public static double execute(LevelAccessor world, Entity entity) {

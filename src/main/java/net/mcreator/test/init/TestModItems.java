@@ -11,6 +11,7 @@ import net.minecraftforge.common.ForgeSpawnEggItem;
 
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.DoubleHighBlockItem;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.BlockItem;
 
@@ -33,8 +34,19 @@ public class TestModItems {
 	public static final RegistryObject<Item> DEBUG_TEST_TOOL = REGISTRY.register("debug_test_tool", () -> new DebugTestToolItem());
 	public static final RegistryObject<Item> TEST_LIGHT_BLOCK = block(TestModBlocks.TEST_LIGHT_BLOCK, null);
 	public static final RegistryObject<Item> MECH_TEST_BODY_SPAWN_EGG = REGISTRY.register("mech_test_body_spawn_egg", () -> new ForgeSpawnEggItem(TestModEntities.MECH_TEST_BODY, -1, -1, new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
+	public static final RegistryObject<Item> TEST_BUTTON = block(TestModBlocks.TEST_BUTTON, CreativeModeTab.TAB_REDSTONE);
+	public static final RegistryObject<Item> TEST_DOOR = doubleBlock(TestModBlocks.TEST_DOOR, CreativeModeTab.TAB_REDSTONE);
+	public static final RegistryObject<Item> TEST_PRESSURE_PLATE = block(TestModBlocks.TEST_PRESSURE_PLATE, CreativeModeTab.TAB_REDSTONE);
+	public static final RegistryObject<Item> TEST_LIGHT_OFF = block(TestModBlocks.TEST_LIGHT_OFF, CreativeModeTab.TAB_REDSTONE);
+	public static final RegistryObject<Item> TEST_LIGHT_ON = block(TestModBlocks.TEST_LIGHT_ON, CreativeModeTab.TAB_REDSTONE);
+	public static final RegistryObject<Item> TEST_REDSTONE_OFF = block(TestModBlocks.TEST_REDSTONE_OFF, CreativeModeTab.TAB_REDSTONE);
+	public static final RegistryObject<Item> TEST_REDSTONE_ON = block(TestModBlocks.TEST_REDSTONE_ON, CreativeModeTab.TAB_REDSTONE);
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block, CreativeModeTab tab) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties().tab(tab)));
+	}
+
+	private static RegistryObject<Item> doubleBlock(RegistryObject<Block> block, CreativeModeTab tab) {
+		return REGISTRY.register(block.getId().getPath(), () -> new DoubleHighBlockItem(block.get(), new Item.Properties().tab(tab)));
 	}
 }

@@ -7,14 +7,8 @@
     "customModelName": "Normal",
     "name": "Matter manipulator beta",
     "specialInfo": [
-      "Liquid Upgrade: False",
-      "Paint Upgrade: False",
-      "Wiring Upgrade: False",
-      "Radius Level: 0 (1x1x1)",
-      "Power Level: 0 (100%)",
-      "Range Level: 0 (10)",
-      "(I don't know how to change this",
-      "information as you upgrade it!)"
+      "Press R to cycle through unlocked modes",
+      "Press U to open the upgrade GUI"
     ],
     "creativeTab": {
       "value": "TOOLS"

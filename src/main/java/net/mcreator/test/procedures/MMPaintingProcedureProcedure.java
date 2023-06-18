@@ -1,8 +1,21 @@
 package net.mcreator.test.procedures;
 
-import net.minecraftforge.eventbus.api.Event;
+import net.minecraftforge.registries.ForgeRegistries;
 
-import javax.annotation.Nullable;
+import net.minecraft.world.level.block.state.properties.Property;
+import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.block.entity.BlockEntity;
+import net.minecraft.world.level.LevelAccessor;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.Entity;
+import net.minecraft.tags.ItemTags;
+import net.minecraft.tags.BlockTags;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.nbt.CompoundTag;
+import net.minecraft.core.BlockPos;
+
+import java.util.Map;
 
 public class MMPaintingProcedureProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
@@ -11,10 +24,9 @@ public class MMPaintingProcedureProcedure {
 		boolean isBlockDyeable = false;
 		double dyeColor = 0;
 		double blockColor = 0;
-		double typeOfBlock = 0;
 		String colorName = "";
 		String blockTypeName = "";
-		if ((entity instanceof LivingEntity _livEnt ? _livEnt.getOffhandItem() : ItemStack.EMPTY).is(ItemTags.create(new ResourceLocation("test:vanilla_dye_item_tag")))) {
+		if ((entity instanceof LivingEntity _livEnt ? _livEnt.getOffhandItem() : ItemStack.EMPTY).is(ItemTags.create(new ResourceLocation("test:dye_item_tag")))) {
 			if ((ForgeRegistries.ITEMS.getKey((entity instanceof LivingEntity _livEnt ? _livEnt.getOffhandItem() : ItemStack.EMPTY).getItem()).toString()).contains("pink")) {
 				dyeColor = 16;
 				colorName = "pink";
@@ -65,35 +77,40 @@ public class MMPaintingProcedureProcedure {
 				colorName = "white";
 			}
 			if ((world.getBlockState(new BlockPos(x, y, z))).is(BlockTags.create(new ResourceLocation("minecraft:wool")))) {
-				isBlockDyeable = isBlockDyeable;
 				blockTypeName = "_wool";
 			} else if ((world.getBlockState(new BlockPos(x, y, z))).is(BlockTags.create(new ResourceLocation("minecraft:wool_carpets")))) {
-				isBlockDyeable = isBlockDyeable;
 				blockTypeName = "_carpet";
 			} else if ((world.getBlockState(new BlockPos(x, y, z))).is(BlockTags.create(new ResourceLocation("minecraft:impermeable")))) {
-				isBlockDyeable = isBlockDyeable;
 				blockTypeName = "_stained_glass";
 			} else if ((world.getBlockState(new BlockPos(x, y, z))).is(BlockTags.create(new ResourceLocation("test:vanilla_stained_glass_pane_block_tag")))) {
-				isBlockDyeable = isBlockDyeable;
 				blockTypeName = "_stained_glass_pane";
 			} else if ((world.getBlockState(new BlockPos(x, y, z))).is(BlockTags.create(new ResourceLocation("minecraft:terracotta")))) {
-				isBlockDyeable = isBlockDyeable;
 				blockTypeName = "_terracotta";
 			} else if ((world.getBlockState(new BlockPos(x, y, z))).is(BlockTags.create(new ResourceLocation("test:vanilla_glazed_terracotta_block_tag")))) {
-				isBlockDyeable = isBlockDyeable;
 				blockTypeName = "_glazed_terracotta";
 			} else if ((world.getBlockState(new BlockPos(x, y, z))).is(BlockTags.create(new ResourceLocation("test:vanilla_concrete_block_tag")))) {
-				isBlockDyeable = isBlockDyeable;
 				if ((ForgeRegistries.BLOCKS.getKey((world.getBlockState(new BlockPos(x, y, z))).getBlock()).toString()).contains("powder")) {
 					blockTypeName = "_concrete_powder";
 				} else {
-					blockTypeName = "_powder";
+					blockTypeName = "_concrete";
 				}
 			} else if ((world.getBlockState(new BlockPos(x, y, z))).is(BlockTags.create(new ResourceLocation("minecraft:shulker_boxes")))) {
-				isBlockDyeable = isBlockDyeable;
 				blockTypeName = "_shulker_box";
+			} else if ((world.getBlockState(new BlockPos(x, y, z))).is(BlockTags.create(new ResourceLocation("minecraft:banners")))) {
+				if ((ForgeRegistries.BLOCKS.getKey((world.getBlockState(new BlockPos(x, y, z))).getBlock()).toString()).contains("wall")) {
+					blockTypeName = "_wall_banner";
+				} else {
+					blockTypeName = "_banner";
+				}
+			} else if ((world.getBlockState(new BlockPos(x, y, z))).is(BlockTags.create(new ResourceLocation("minecraft:candles")))
+					|| (world.getBlockState(new BlockPos(x, y, z))).is(BlockTags.create(new ResourceLocation("minecraft:candle_cakes")))) {
+				if ((ForgeRegistries.BLOCKS.getKey((world.getBlockState(new BlockPos(x, y, z))).getBlock()).toString()).contains("cake")) {
+					blockTypeName = "_candle_cake";
+				} else {
+					blockTypeName = "_candle";
+				}
 			}
-			if (isBlockDyeable == true) {
+			if (!(colorName).isEmpty() && !(blockTypeName).isEmpty()) {
 				if ((ForgeRegistries.BLOCKS.getKey((world.getBlockState(new BlockPos(x, y, z))).getBlock()).toString()).contains("pink")) {
 					blockColor = 16;
 				} else if ((ForgeRegistries.BLOCKS.getKey((world.getBlockState(new BlockPos(x, y, z))).getBlock()).toString()).contains("magenta")) {
@@ -128,9 +145,35 @@ public class MMPaintingProcedureProcedure {
 					blockColor = 1;
 				}
 				if (dyeColor != blockColor) {
-					if (world instanceof ServerLevel _level)
-						_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
-								("setblock ~ ~ ~ minecraft:" + colorName + blockTypeName));
+					{
+						BlockPos _bp = new BlockPos(x, y, z);
+						BlockState _bs = ForgeRegistries.BLOCKS.getValue(new ResourceLocation((("minecraft:" + colorName + blockTypeName)).toLowerCase(java.util.Locale.ENGLISH))).defaultBlockState();
+						BlockState _bso = world.getBlockState(_bp);
+						for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
+							Property _property = _bs.getBlock().getStateDefinition().getProperty(entry.getKey().getName());
+							if (_property != null && _bs.getValue(_property) != null)
+								try {
+									_bs = _bs.setValue(_property, (Comparable) entry.getValue());
+								} catch (Exception e) {
+								}
+						}
+						BlockEntity _be = world.getBlockEntity(_bp);
+						CompoundTag _bnbt = null;
+						if (_be != null) {
+							_bnbt = _be.saveWithFullMetadata();
+							_be.setRemoved();
+						}
+						world.setBlock(_bp, _bs, 3);
+						if (_bnbt != null) {
+							_be = world.getBlockEntity(_bp);
+							if (_be != null) {
+								try {
+									_be.load(_bnbt);
+								} catch (Exception ignored) {
+								}
+							}
+						}
+					}
 				}
 			}
 		}

@@ -3,8 +3,8 @@
   "_type": "keybind",
   "definition": {
     "triggerKey": "U",
-    "keyBindingName": "MM Upgrade GUI Toggle Keybind",
-    "keyBindingCategoryKey": "misc",
+    "keyBindingName": "Open MM Upgrade GUI",
+    "keyBindingCategoryKey": "ui",
     "onKeyPressed": {
       "name": "MMUpgradeGUIToggleKeybindOnKeyPressed"
     }

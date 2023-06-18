@@ -76,14 +76,8 @@ public class MattermanipulatorbetaItem extends Item {
 	@Override
 	public void appendHoverText(ItemStack itemstack, Level world, List<Component> list, TooltipFlag flag) {
 		super.appendHoverText(itemstack, world, list, flag);
-		list.add(Component.literal("Liquid Upgrade: False"));
-		list.add(Component.literal("Paint Upgrade: False"));
-		list.add(Component.literal("Wiring Upgrade: False"));
-		list.add(Component.literal("Radius Level: 0 (1x1x1)"));
-		list.add(Component.literal("Power Level: 0 (100%)"));
-		list.add(Component.literal("Range Level: 0 (10)"));
-		list.add(Component.literal("(I don't know how to change this"));
-		list.add(Component.literal("information as you upgrade it!)"));
+		list.add(Component.literal("Press R to cycle through unlocked modes"));
+		list.add(Component.literal("Press U to open the upgrade GUI"));
 	}
 
 	@Override

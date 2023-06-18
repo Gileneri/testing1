@@ -1,0 +1,12 @@
+{
+  "replace": false,
+  "values": [
+    "test:test_door",
+    "test:test_redstone_off",
+    "test:test_light_off",
+    "test:test_button",
+    "test:test_pressure_plate",
+    "test:test_light_on",
+    "test:test_redstone_on"
+  ]
+}

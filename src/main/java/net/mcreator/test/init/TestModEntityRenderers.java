@@ -14,6 +14,8 @@ import net.mcreator.test.client.renderer.MechTestLegLeftRenderer;
 import net.mcreator.test.client.renderer.MechTestBodyRenderer;
 import net.mcreator.test.client.renderer.MechTestArmRightRenderer;
 import net.mcreator.test.client.renderer.MechTestArmLeftRenderer;
+import net.mcreator.test.client.renderer.BlockIndicatorEntity3Renderer;
+import net.mcreator.test.client.renderer.BlockIndicatorEntity2Renderer;
 import net.mcreator.test.client.renderer.BlockIndicatorEntity1Renderer;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
@@ -26,5 +28,7 @@ public class TestModEntityRenderers {
 		event.registerEntityRenderer(TestModEntities.MECH_TEST_LEG_LEFT.get(), MechTestLegLeftRenderer::new);
 		event.registerEntityRenderer(TestModEntities.MECH_TEST_LEG_RIGHT.get(), MechTestLegRightRenderer::new);
 		event.registerEntityRenderer(TestModEntities.BLOCK_INDICATOR_ENTITY_1.get(), BlockIndicatorEntity1Renderer::new);
+		event.registerEntityRenderer(TestModEntities.BLOCK_INDICATOR_ENTITY_2.get(), BlockIndicatorEntity2Renderer::new);
+		event.registerEntityRenderer(TestModEntities.BLOCK_INDICATOR_ENTITY_3.get(), BlockIndicatorEntity3Renderer::new);
 	}
 }

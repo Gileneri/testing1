@@ -21,6 +21,8 @@ import net.mcreator.test.entity.MechTestLegLeftEntity;
 import net.mcreator.test.entity.MechTestBodyEntity;
 import net.mcreator.test.entity.MechTestArmRightEntity;
 import net.mcreator.test.entity.MechTestArmLeftEntity;
+import net.mcreator.test.entity.BlockIndicatorEntity3Entity;
+import net.mcreator.test.entity.BlockIndicatorEntity2Entity;
 import net.mcreator.test.entity.BlockIndicatorEntity1Entity;
 import net.mcreator.test.TestMod;
 
@@ -49,6 +51,10 @@ public class TestModEntities {
 					.sized(0.3f, 2.5f));
 	public static final RegistryObject<EntityType<BlockIndicatorEntity1Entity>> BLOCK_INDICATOR_ENTITY_1 = register("block_indicator_entity_1", EntityType.Builder.<BlockIndicatorEntity1Entity>of(BlockIndicatorEntity1Entity::new, MobCategory.MISC)
 			.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(BlockIndicatorEntity1Entity::new).fireImmune().sized(1.01f, 1.01f));
+	public static final RegistryObject<EntityType<BlockIndicatorEntity2Entity>> BLOCK_INDICATOR_ENTITY_2 = register("block_indicator_entity_2", EntityType.Builder.<BlockIndicatorEntity2Entity>of(BlockIndicatorEntity2Entity::new, MobCategory.MISC)
+			.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(BlockIndicatorEntity2Entity::new).fireImmune().sized(1.01f, 1.01f));
+	public static final RegistryObject<EntityType<BlockIndicatorEntity3Entity>> BLOCK_INDICATOR_ENTITY_3 = register("block_indicator_entity_3", EntityType.Builder.<BlockIndicatorEntity3Entity>of(BlockIndicatorEntity3Entity::new, MobCategory.MISC)
+			.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(BlockIndicatorEntity3Entity::new).fireImmune().sized(1.01f, 1.01f));
 
 	private static <T extends Entity> RegistryObject<EntityType<T>> register(String registryname, EntityType.Builder<T> entityTypeBuilder) {
 		return REGISTRY.register(registryname, () -> (EntityType<T>) entityTypeBuilder.build(registryname));
@@ -63,6 +69,8 @@ public class TestModEntities {
 			MechTestLegLeftEntity.init();
 			MechTestLegRightEntity.init();
 			BlockIndicatorEntity1Entity.init();
+			BlockIndicatorEntity2Entity.init();
+			BlockIndicatorEntity3Entity.init();
 		});
 	}
 
@@ -74,5 +82,7 @@ public class TestModEntities {
 		event.put(MECH_TEST_LEG_LEFT.get(), MechTestLegLeftEntity.createAttributes().build());
 		event.put(MECH_TEST_LEG_RIGHT.get(), MechTestLegRightEntity.createAttributes().build());
 		event.put(BLOCK_INDICATOR_ENTITY_1.get(), BlockIndicatorEntity1Entity.createAttributes().build());
+		event.put(BLOCK_INDICATOR_ENTITY_2.get(), BlockIndicatorEntity2Entity.createAttributes().build());
+		event.put(BLOCK_INDICATOR_ENTITY_3.get(), BlockIndicatorEntity3Entity.createAttributes().build());
 	}
 }

@@ -30,7 +30,7 @@
       "name": "FlashlightTest"
     },
     "onEntitySwing": {
-      "name": "SpiralSearchBaseProcedure"
+      "name": "DebugTestToolEntitySwingsItem"
     }
   }
 }

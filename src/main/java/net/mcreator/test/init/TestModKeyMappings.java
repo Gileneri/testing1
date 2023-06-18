@@ -17,6 +17,7 @@ import net.minecraft.client.KeyMapping;
 
 import net.mcreator.test.network.MechJumpMessage;
 import net.mcreator.test.network.MMUpgradeGUIToggleKeybindMessage;
+import net.mcreator.test.network.MMChangeModeKeybindMessage;
 import net.mcreator.test.TestMod;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD, value = {Dist.CLIENT})
@@ -34,7 +35,7 @@ public class TestModKeyMappings {
 			isDownOld = isDown;
 		}
 	};
-	public static final KeyMapping MM_UPGRADE_GUI_TOGGLE_KEYBIND = new KeyMapping("key.test.mm_upgrade_gui_toggle_keybind", GLFW.GLFW_KEY_U, "key.categories.misc") {
+	public static final KeyMapping MM_UPGRADE_GUI_TOGGLE_KEYBIND = new KeyMapping("key.test.mm_upgrade_gui_toggle_keybind", GLFW.GLFW_KEY_U, "key.categories.ui") {
 		private boolean isDownOld = false;
 
 		@Override
@@ -47,11 +48,25 @@ public class TestModKeyMappings {
 			isDownOld = isDown;
 		}
 	};
+	public static final KeyMapping MM_CHANGE_MODE_KEYBIND = new KeyMapping("key.test.mm_change_mode_keybind", GLFW.GLFW_KEY_R, "key.categories.misc") {
+		private boolean isDownOld = false;
+
+		@Override
+		public void setDown(boolean isDown) {
+			super.setDown(isDown);
+			if (isDownOld != isDown && isDown) {
+				TestMod.PACKET_HANDLER.sendToServer(new MMChangeModeKeybindMessage(0, 0));
+				MMChangeModeKeybindMessage.pressAction(Minecraft.getInstance().player, 0, 0);
+			}
+			isDownOld = isDown;
+		}
+	};
 
 	@SubscribeEvent
 	public static void registerKeyMappings(RegisterKeyMappingsEvent event) {
 		event.register(MECH_JUMP);
 		event.register(MM_UPGRADE_GUI_TOGGLE_KEYBIND);
+		event.register(MM_CHANGE_MODE_KEYBIND);
 	}
 
 	@Mod.EventBusSubscriber({Dist.CLIENT})
@@ -61,6 +76,7 @@ public class TestModKeyMappings {
 			if (Minecraft.getInstance().screen == null) {
 				MECH_JUMP.consumeClick();
 				MM_UPGRADE_GUI_TOGGLE_KEYBIND.consumeClick();
+				MM_CHANGE_MODE_KEYBIND.consumeClick();
 			}
 		}
 	}
