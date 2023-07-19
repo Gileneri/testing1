@@ -1,0 +1,14 @@
+{
+	"texture": "celestial:sky/higher/objects/under_poison_night.png",
+	"display": {
+		"scale": "100",
+		"distance": "-100"
+	},
+	"rotation": {
+		"degrees_x": "90"
+	},
+	"properties": {
+		"alpha": "((#yPos < 248) * (1 - #dayLight))",
+		"is_solid": true
+	}
+}

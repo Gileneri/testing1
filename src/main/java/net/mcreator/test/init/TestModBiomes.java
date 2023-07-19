@@ -37,6 +37,7 @@ import net.mcreator.test.world.biome.OceanBiome;
 import net.mcreator.test.world.biome.Ocean1Biome;
 import net.mcreator.test.world.biome.NoiseBiome;
 import net.mcreator.test.world.biome.Noise1Biome;
+import net.mcreator.test.world.biome.NoSnowHighUpBiomeBiome;
 import net.mcreator.test.TestMod;
 
 import java.util.Map;
@@ -56,6 +57,7 @@ public class TestModBiomes {
 	public static final RegistryObject<Biome> NOISE_1 = REGISTRY.register("noise_1", Noise1Biome::createBiome);
 	public static final RegistryObject<Biome> OCEAN_1 = REGISTRY.register("ocean_1", Ocean1Biome::createBiome);
 	public static final RegistryObject<Biome> PLAINS_1 = REGISTRY.register("plains_1", Plains1Biome::createBiome);
+	public static final RegistryObject<Biome> NO_SNOW_HIGH_UP_BIOME = REGISTRY.register("no_snow_high_up_biome", NoSnowHighUpBiomeBiome::createBiome);
 
 	@SubscribeEvent
 	public static void onServerAboutToStart(ServerAboutToStartEvent event) {

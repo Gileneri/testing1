@@ -18,12 +18,15 @@ import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 
 import net.mcreator.test.fluid.PoisonFluid;
+import net.mcreator.test.fluid.CoreLavaFluid;
 import net.mcreator.test.TestMod;
 
 public class TestModFluids {
 	public static final DeferredRegister<Fluid> REGISTRY = DeferredRegister.create(ForgeRegistries.FLUIDS, TestMod.MODID);
 	public static final RegistryObject<FlowingFluid> POISON = REGISTRY.register("poison", () -> new PoisonFluid.Source());
 	public static final RegistryObject<FlowingFluid> FLOWING_POISON = REGISTRY.register("flowing_poison", () -> new PoisonFluid.Flowing());
+	public static final RegistryObject<FlowingFluid> CORE_LAVA = REGISTRY.register("core_lava", () -> new CoreLavaFluid.Source());
+	public static final RegistryObject<FlowingFluid> FLOWING_CORE_LAVA = REGISTRY.register("flowing_core_lava", () -> new CoreLavaFluid.Flowing());
 
 	@Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
 	public static class ClientSideHandler {
@@ -31,6 +34,8 @@ public class TestModFluids {
 		public static void clientSetup(FMLClientSetupEvent event) {
 			ItemBlockRenderTypes.setRenderLayer(POISON.get(), RenderType.translucent());
 			ItemBlockRenderTypes.setRenderLayer(FLOWING_POISON.get(), RenderType.translucent());
+			ItemBlockRenderTypes.setRenderLayer(CORE_LAVA.get(), RenderType.translucent());
+			ItemBlockRenderTypes.setRenderLayer(FLOWING_CORE_LAVA.get(), RenderType.translucent());
 		}
 	}
 }

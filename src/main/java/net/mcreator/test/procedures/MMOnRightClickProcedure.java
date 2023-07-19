@@ -99,7 +99,8 @@ public class MMOnRightClickProcedure {
 										Comparator<Entity> compareDistOf(double _x, double _y, double _z) {
 											return Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_x, _y, _z));
 										}
-									}.compareDistOf(targetX, targetY, targetZ)).findFirst().orElse(null)).getPersistentData().getDouble("MMminingProgress") <= 0) {
+									}.compareDistOf(targetX, targetY, targetZ)).findFirst().orElse(null)).getPersistentData().getDouble("MMminingProgress") <= 0
+											&& world.getBlockState(new BlockPos(targetX, targetY, targetZ)).getDestroySpeed(world, new BlockPos(targetX, targetY, targetZ)) > 0) {
 										if (world.getBlockState(new BlockPos(targetX, targetY, targetZ)).getDestroySpeed(world, new BlockPos(targetX, targetY, targetZ)) < 20) {
 											((Entity) world.getEntitiesOfClass(BlockIndicatorEntity1Entity.class, AABB.ofSize(new Vec3(targetX, targetY, targetZ), 0.2, 0.2, 0.2), e -> true).stream().sorted(new Object() {
 												Comparator<Entity> compareDistOf(double _x, double _y, double _z) {
@@ -138,7 +139,7 @@ public class MMOnRightClickProcedure {
 													_level.playLocalSound(targetX, targetY, targetZ, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.stone.step")), SoundSource.BLOCKS, 1, 1, false);
 												}
 											}
-											world.levelEvent(2001, new BlockPos(targetX, targetY, targetZ), Block.getId((world.getFluidState(new BlockPos(targetX, targetY, targetZ)).createLegacyBlock())));
+											world.levelEvent(2001, new BlockPos(targetX, targetY, targetZ), Block.getId((world.getBlockState(new BlockPos(targetX, targetY, targetZ)))));
 										} else {
 											{
 												BlockPos _pos = new BlockPos(targetX, targetY, targetZ);
@@ -168,7 +169,8 @@ public class MMOnRightClickProcedure {
 										Comparator<Entity> compareDistOf(double _x, double _y, double _z) {
 											return Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_x, _y, _z));
 										}
-									}.compareDistOf(targetX, targetY, targetZ)).findFirst().orElse(null)).getPersistentData().getDouble("MMminingProgress") <= 0) {
+									}.compareDistOf(targetX, targetY, targetZ)).findFirst().orElse(null)).getPersistentData().getDouble("MMminingProgress") <= 0
+											&& world.getBlockState(new BlockPos(targetX, targetY, targetZ)).getDestroySpeed(world, new BlockPos(targetX, targetY, targetZ)) > 0) {
 										if (world.getBlockState(new BlockPos(targetX, targetY, targetZ)).getDestroySpeed(world, new BlockPos(targetX, targetY, targetZ)) < 20) {
 											((Entity) world.getEntitiesOfClass(BlockIndicatorEntity1Entity.class, AABB.ofSize(new Vec3(targetX, targetY, targetZ), 0.2, 0.2, 0.2), e -> true).stream().sorted(new Object() {
 												Comparator<Entity> compareDistOf(double _x, double _y, double _z) {
@@ -207,7 +209,7 @@ public class MMOnRightClickProcedure {
 													_level.playLocalSound(targetX, targetY, targetZ, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.stone.step")), SoundSource.BLOCKS, 1, 1, false);
 												}
 											}
-											world.levelEvent(2001, new BlockPos(targetX, targetY, targetZ), Block.getId((world.getFluidState(new BlockPos(targetX, targetY, targetZ)).createLegacyBlock())));
+											world.levelEvent(2001, new BlockPos(targetX, targetY, targetZ), Block.getId((world.getBlockState(new BlockPos(targetX, targetY, targetZ)))));
 										} else {
 											{
 												BlockPos _pos = new BlockPos(targetX, targetY, targetZ);
@@ -341,7 +343,8 @@ public class MMOnRightClickProcedure {
 															Comparator<Entity> compareDistOf(double _x, double _y, double _z) {
 																return Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_x, _y, _z));
 															}
-														}.compareDistOf((xPos + targetX), (yPos + 0.5 + targetY), (zPos + targetZ))).findFirst().orElse(null)).getPersistentData().getDouble("MMminingProgress") <= 0) {
+														}.compareDistOf((xPos + targetX), (yPos + 0.5 + targetY), (zPos + targetZ))).findFirst().orElse(null)).getPersistentData().getDouble("MMminingProgress") <= 0
+														&& world.getBlockState(new BlockPos(xPos + targetX, yPos + 0.5 + targetY, zPos + targetZ)).getDestroySpeed(world, new BlockPos(xPos + targetX, yPos + 0.5 + targetY, zPos + targetZ)) > 0) {
 													if (world.getBlockState(new BlockPos(xPos + targetX, yPos + 0.5 + targetY, zPos + targetZ)).getDestroySpeed(world, new BlockPos(xPos + targetX, yPos + 0.5 + targetY, zPos + targetZ)) < 20) {
 														((Entity) world.getEntitiesOfClass(BlockIndicatorEntity1Entity.class, AABB.ofSize(new Vec3((xPos + targetX), (yPos + 0.5 + targetY), (zPos + targetZ)), 0.2, 0.2, 0.2), e -> true).stream()
 																.sorted(new Object() {

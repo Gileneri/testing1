@@ -19,7 +19,7 @@ import net.minecraft.world.entity.Entity;
 import net.minecraft.network.chat.Component;
 import net.minecraft.core.BlockPos;
 
-import net.mcreator.test.procedures.FlashlightTestProcedure;
+import net.mcreator.test.procedures.DebugTestToolToolInHandTickProcedure;
 import net.mcreator.test.procedures.DebugTestToolEntitySwingsItemProcedure;
 
 import java.util.List;
@@ -29,7 +29,7 @@ import com.google.common.collect.ImmutableMultimap;
 
 public class DebugTestToolItem extends Item {
 	public DebugTestToolItem() {
-		super(new Item.Properties().tab(CreativeModeTab.TAB_TOOLS).durability(100));
+		super(new Item.Properties().tab(CreativeModeTab.TAB_TOOLS).durability(0));
 	}
 
 	@Override
@@ -69,14 +69,14 @@ public class DebugTestToolItem extends Item {
 	@Override
 	public void appendHoverText(ItemStack itemstack, Level world, List<Component> list, TooltipFlag flag) {
 		super.appendHoverText(itemstack, world, list, flag);
-		list.add(Component.literal("A magical stick that may"));
-		list.add(Component.literal("do nothing at all!~"));
+		list.add(Component.literal("\u00A7dA magical stick that may"));
+		list.add(Component.literal("\u00A7ddo nothing at all!~"));
 	}
 
 	@Override
 	public boolean onEntitySwing(ItemStack itemstack, LivingEntity entity) {
 		boolean retval = super.onEntitySwing(itemstack, entity);
-		DebugTestToolEntitySwingsItemProcedure.execute();
+		DebugTestToolEntitySwingsItemProcedure.execute(entity);
 		return retval;
 	}
 
@@ -84,7 +84,7 @@ public class DebugTestToolItem extends Item {
 	public void inventoryTick(ItemStack itemstack, Level world, Entity entity, int slot, boolean selected) {
 		super.inventoryTick(itemstack, world, entity, slot, selected);
 		if (selected)
-			FlashlightTestProcedure.execute(world, entity);
+			DebugTestToolToolInHandTickProcedure.execute(world, entity.getX(), entity.getY(), entity.getZ());
 	}
 
 	@Override

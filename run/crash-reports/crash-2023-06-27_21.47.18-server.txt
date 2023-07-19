@@ -1,0 +1,135 @@
+---- Minecraft Crash Report ----
+// Surprise! Haha. Well, this is awkward.
+
+Time: 2023-06-27 21:47:18
+Description: Ticking player
+
+java.lang.ArrayIndexOutOfBoundsException: Index 133 out of bounds for length 24
+	at net.minecraft.server.level.ChunkHolder.blockChanged(ChunkHolder.java:158) ~[forge-1.19.2-43.2.0_mapped_official_1.19.2.jar%23188!/:?] {re:classloading}
+	at net.minecraft.server.level.ServerChunkCache.blockChanged(ServerChunkCache.java:414) ~[forge-1.19.2-43.2.0_mapped_official_1.19.2.jar%23188!/:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.server.level.ServerLevel.sendBlockUpdated(ServerLevel.java:938) ~[forge-1.19.2-43.2.0_mapped_official_1.19.2.jar%23188!/:?] {re:classloading,pl:accesstransformer:B}
+	at net.mcreator.test.procedures.FlashlightTestProcedure.execute(FlashlightTestProcedure.java:50) ~[%23193!/:?] {re:classloading}
+	at net.mcreator.test.procedures.MMWhenInHandTickProcedure.execute(MMWhenInHandTickProcedure.java:70) ~[%23193!/:?] {re:classloading}
+	at net.mcreator.test.item.MattermanipulatorbetaItem.inventoryTick(MattermanipulatorbetaItem.java:87) ~[%23193!/:?] {re:classloading}
+	at net.minecraft.world.item.ItemStack.inventoryTick(ItemStack.java:508) ~[forge-1.19.2-43.2.0_mapped_official_1.19.2.jar%23188!/:?] {re:classloading,xf:fml:forge:itemstack}
+	at net.minecraft.world.entity.player.Inventory.tick(Inventory.java:228) ~[forge-1.19.2-43.2.0_mapped_official_1.19.2.jar%23188!/:?] {re:classloading}
+	at net.minecraft.world.entity.player.Player.aiStep(Player.java:499) ~[forge-1.19.2-43.2.0_mapped_official_1.19.2.jar%23188!/:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.world.entity.LivingEntity.tick(LivingEntity.java:2291) ~[forge-1.19.2-43.2.0_mapped_official_1.19.2.jar%23188!/:?] {re:classloading}
+	at net.minecraft.world.entity.player.Player.tick(Player.java:243) ~[forge-1.19.2-43.2.0_mapped_official_1.19.2.jar%23188!/:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.server.level.ServerPlayer.doTick(ServerPlayer.java:447) ~[forge-1.19.2-43.2.0_mapped_official_1.19.2.jar%23188!/:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.server.network.ServerGamePacketListenerImpl.tick(ServerGamePacketListenerImpl.java:264) ~[forge-1.19.2-43.2.0_mapped_official_1.19.2.jar%23188!/:?] {re:classloading}
+	at net.minecraft.network.Connection.tick(Connection.java:248) ~[forge-1.19.2-43.2.0_mapped_official_1.19.2.jar%23188!/:?] {re:classloading}
+	at net.minecraft.server.network.ServerConnectionListener.tick(ServerConnectionListener.java:143) ~[forge-1.19.2-43.2.0_mapped_official_1.19.2.jar%23188!/:?] {re:classloading}
+	at net.minecraft.server.MinecraftServer.tickChildren(MinecraftServer.java:880) ~[forge-1.19.2-43.2.0_mapped_official_1.19.2.jar%23188!/:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.server.MinecraftServer.tickServer(MinecraftServer.java:806) ~[forge-1.19.2-43.2.0_mapped_official_1.19.2.jar%23188!/:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.client.server.IntegratedServer.tickServer(IntegratedServer.java:84) ~[forge-1.19.2-43.2.0_mapped_official_1.19.2.jar%23188!/:?] {re:classloading,pl:runtimedistcleaner:A}
+	at net.minecraft.server.MinecraftServer.runServer(MinecraftServer.java:654) ~[forge-1.19.2-43.2.0_mapped_official_1.19.2.jar%23188!/:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.server.MinecraftServer.lambda$spin$2(MinecraftServer.java:244) ~[forge-1.19.2-43.2.0_mapped_official_1.19.2.jar%23188!/:?] {re:classloading,pl:accesstransformer:B}
+	at java.lang.Thread.run(Thread.java:833) [?:?] {}
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Thread: Server thread
+Stacktrace:
+	at net.minecraft.server.level.ChunkHolder.blockChanged(ChunkHolder.java:158) ~[forge-1.19.2-43.2.0_mapped_official_1.19.2.jar%23188!/:?] {re:classloading}
+	at net.minecraft.server.level.ServerChunkCache.blockChanged(ServerChunkCache.java:414) ~[forge-1.19.2-43.2.0_mapped_official_1.19.2.jar%23188!/:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.server.level.ServerLevel.sendBlockUpdated(ServerLevel.java:938) ~[forge-1.19.2-43.2.0_mapped_official_1.19.2.jar%23188!/:?] {re:classloading,pl:accesstransformer:B}
+	at net.mcreator.test.procedures.FlashlightTestProcedure.execute(FlashlightTestProcedure.java:50) ~[%23193!/:?] {re:classloading}
+	at net.mcreator.test.procedures.MMWhenInHandTickProcedure.execute(MMWhenInHandTickProcedure.java:70) ~[%23193!/:?] {re:classloading}
+	at net.mcreator.test.item.MattermanipulatorbetaItem.inventoryTick(MattermanipulatorbetaItem.java:87) ~[%23193!/:?] {re:classloading}
+	at net.minecraft.world.item.ItemStack.inventoryTick(ItemStack.java:508) ~[forge-1.19.2-43.2.0_mapped_official_1.19.2.jar%23188!/:?] {re:classloading,xf:fml:forge:itemstack}
+	at net.minecraft.world.entity.player.Inventory.tick(Inventory.java:228) ~[forge-1.19.2-43.2.0_mapped_official_1.19.2.jar%23188!/:?] {re:classloading}
+	at net.minecraft.world.entity.player.Player.aiStep(Player.java:499) ~[forge-1.19.2-43.2.0_mapped_official_1.19.2.jar%23188!/:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.world.entity.LivingEntity.tick(LivingEntity.java:2291) ~[forge-1.19.2-43.2.0_mapped_official_1.19.2.jar%23188!/:?] {re:classloading}
+	at net.minecraft.world.entity.player.Player.tick(Player.java:243) ~[forge-1.19.2-43.2.0_mapped_official_1.19.2.jar%23188!/:?] {re:classloading,pl:accesstransformer:B}
+-- Player being ticked --
+Details:
+	Entity Type: minecraft:player (net.minecraft.server.level.ServerPlayer)
+	Entity ID: 227
+	Entity Name: Dev
+	Entity's Exact location: 59.43, 2072.36, 50.20
+	Entity's Block location: World: (59,2072,50), Section: (at 11,8,2 in 3,129,3; chunk contains blocks 48,-64,48 to 63,319,63), Region: (0,0; contains chunks 0,0 to 31,31, blocks 0,-64,0 to 511,319,511)
+	Entity's Momentum: 0.00, 0.00, 0.00
+	Entity's Passengers: []
+	Entity's Vehicle: null
+Stacktrace:
+	at net.minecraft.server.level.ServerPlayer.doTick(ServerPlayer.java:447) ~[forge-1.19.2-43.2.0_mapped_official_1.19.2.jar%23188!/:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.server.network.ServerGamePacketListenerImpl.tick(ServerGamePacketListenerImpl.java:264) ~[forge-1.19.2-43.2.0_mapped_official_1.19.2.jar%23188!/:?] {re:classloading}
+	at net.minecraft.network.Connection.tick(Connection.java:248) ~[forge-1.19.2-43.2.0_mapped_official_1.19.2.jar%23188!/:?] {re:classloading}
+	at net.minecraft.server.network.ServerConnectionListener.tick(ServerConnectionListener.java:143) ~[forge-1.19.2-43.2.0_mapped_official_1.19.2.jar%23188!/:?] {re:classloading}
+	at net.minecraft.server.MinecraftServer.tickChildren(MinecraftServer.java:880) ~[forge-1.19.2-43.2.0_mapped_official_1.19.2.jar%23188!/:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.server.MinecraftServer.tickServer(MinecraftServer.java:806) ~[forge-1.19.2-43.2.0_mapped_official_1.19.2.jar%23188!/:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.client.server.IntegratedServer.tickServer(IntegratedServer.java:84) ~[forge-1.19.2-43.2.0_mapped_official_1.19.2.jar%23188!/:?] {re:classloading,pl:runtimedistcleaner:A}
+	at net.minecraft.server.MinecraftServer.runServer(MinecraftServer.java:654) ~[forge-1.19.2-43.2.0_mapped_official_1.19.2.jar%23188!/:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.server.MinecraftServer.lambda$spin$2(MinecraftServer.java:244) ~[forge-1.19.2-43.2.0_mapped_official_1.19.2.jar%23188!/:?] {re:classloading,pl:accesstransformer:B}
+	at java.lang.Thread.run(Thread.java:833) [?:?] {}
+
+
+-- System Details --
+Details:
+	Minecraft Version: 1.19.2
+	Minecraft Version ID: 1.19.2
+	Operating System: Windows 10 (amd64) version 10.0
+	Java Version: 17.0.5, Eclipse Adoptium
+	Java VM Version: OpenJDK 64-Bit Server VM (mixed mode, sharing), Eclipse Adoptium
+	Memory: 777792136 bytes (741 MiB) / 1686110208 bytes (1608 MiB) up to 4280287232 bytes (4082 MiB)
+	CPUs: 8
+	Processor Vendor: GenuineIntel
+	Processor Name: Intel(R) Core(TM) i7-4790K CPU @ 4.00GHz
+	Identifier: Intel64 Family 6 Model 60 Stepping 3
+	Microarchitecture: Haswell (Client)
+	Frequency (GHz): 4.00
+	Number of physical packages: 1
+	Number of physical CPUs: 4
+	Number of logical CPUs: 8
+	Graphics card #0 name: NVIDIA GeForce GTX 970
+	Graphics card #0 vendor: NVIDIA (0x10de)
+	Graphics card #0 VRAM (MB): 4095.00
+	Graphics card #0 deviceId: 0x13c2
+	Graphics card #0 versionInfo: DriverVersion=31.0.15.1694
+	Memory slot #0 capacity (MB): 8192.00
+	Memory slot #0 clockSpeed (GHz): 1.33
+	Memory slot #0 type: DDR3
+	Memory slot #1 capacity (MB): 8192.00
+	Memory slot #1 clockSpeed (GHz): 1.33
+	Memory slot #1 type: DDR3
+	Virtual memory max (MB): 35708.79
+	Virtual memory used (MB): 25017.38
+	Swap memory total (MB): 19382.19
+	Swap memory used (MB): 1238.59
+	JVM Flags: 1 total; -XX:HeapDumpPath=MojangTricksIntelDriversForPerformance_javaw.exe_minecraft.exe.heapdump
+	Server Running: true
+	Player Count: 1 / 8; [ServerPlayer['Dev'/227, l='ServerLevel[crash test]', x=59.43, y=2072.36, z=50.20]]
+	Data Packs: vanilla, mod:test, mod:forge
+	World Generation: Experimental
+	Type: Integrated Server (map_client.txt)
+	Is Modded: Definitely; Client brand changed to 'forge'; Server brand changed to 'forge'
+	Launched Version: MOD_DEV
+	ModLauncher: 10.0.9+10.0.9+main.dcd20f30
+	ModLauncher launch target: forgeclientuserdev
+	ModLauncher naming: mcp
+	ModLauncher services: 
+		mixin-0.8.5.jar mixin PLUGINSERVICE 
+		eventbus-6.0.3.jar eventbus PLUGINSERVICE 
+		fmlloader-1.19.2-43.2.0.jar slf4jfixer PLUGINSERVICE 
+		fmlloader-1.19.2-43.2.0.jar object_holder_definalize PLUGINSERVICE 
+		fmlloader-1.19.2-43.2.0.jar runtime_enum_extender PLUGINSERVICE 
+		fmlloader-1.19.2-43.2.0.jar capability_token_subclass PLUGINSERVICE 
+		accesstransformers-8.0.4.jar accesstransformer PLUGINSERVICE 
+		fmlloader-1.19.2-43.2.0.jar runtimedistcleaner PLUGINSERVICE 
+		modlauncher-10.0.9.jar mixin TRANSFORMATIONSERVICE 
+		modlauncher-10.0.9.jar fml TRANSFORMATIONSERVICE 
+	FML Language Providers: 
+		minecraft@1.0
+		lowcodefml@null
+		javafml@null
+	Mod List: 
+		forge-1.19.2-43.2.0_mapped_official_1.19.2.jar    |Minecraft                     |minecraft                     |1.19.2              |DONE      |Manifest: a1:d4:5e:04:4f:d3:d6:e0:7b:37:97:cf:77:b0:de:ad:4a:47:ce:8c:96:49:5f:0a:cf:8c:ae:b2:6d:4b:8a:3f
+		main                                              |test                          |test                          |1.0.0               |DONE      |Manifest: NOSIGNATURE
+		                                                  |Forge                         |forge                         |43.2.0              |DONE      |Manifest: NOSIGNATURE
+	Crash Report UUID: 10aca5ed-73bd-4762-8e8c-273717fc2f4d
+	FML: 43.2
+	Forge: net.minecraftforge:43.2.0

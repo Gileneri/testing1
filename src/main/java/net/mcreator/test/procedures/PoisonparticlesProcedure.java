@@ -8,7 +8,8 @@ import net.minecraftforge.event.TickEvent;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.ClipContext;
 import net.minecraft.world.entity.Entity;
-import net.minecraft.server.level.ServerLevel;
+import net.minecraft.util.RandomSource;
+import net.minecraft.util.Mth;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.core.BlockPos;
 
@@ -33,14 +34,23 @@ public class PoisonparticlesProcedure {
 		if (entity == null)
 			return false;
 		boolean under_liquid = false;
+		double xPos = 0;
+		double yPos = 0;
+		double zPos = 0;
 		under_liquid = false;
 		if ((world
 				.getFluidState(new BlockPos(x,
 						entity.level.clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(0.000001)), ClipContext.Block.OUTLINE, ClipContext.Fluid.ANY, entity)).getBlockPos().getY(), z))
 				.createLegacyBlock()).getBlock() == TestModBlocks.POISON.get()) {
 			under_liquid = true;
-			if (world instanceof ServerLevel _level)
-				_level.sendParticles(ParticleTypes.UNDERWATER, x, y, z, 30, 6, 6, 6, 1);
+			for (int index0 = 0; index0 < (int) (15); index0++) {
+				xPos = x + Mth.nextDouble(RandomSource.create(), -6, 6);
+				yPos = y + Mth.nextDouble(RandomSource.create(), -6, 6);
+				zPos = z + Mth.nextDouble(RandomSource.create(), -6, 6);
+				if ((world.getFluidState(new BlockPos(xPos, yPos, zPos)).createLegacyBlock()).getBlock() == TestModBlocks.POISON.get()) {
+					world.addParticle(ParticleTypes.UNDERWATER, xPos, yPos, zPos, 0, 0, 0);
+				}
+			}
 		}
 		return under_liquid;
 	}

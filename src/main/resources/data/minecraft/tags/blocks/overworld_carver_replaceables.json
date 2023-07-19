@@ -8,6 +8,8 @@
     "minecraft:moss_block",
     "minecraft:mossy_cobblestone",
     "minecraft:blackstone",
-    "minecraft:gravel"
+    "minecraft:gravel",
+    "minecraft:coarse_dirt",
+    "minecraft:stone"
   ]
 }

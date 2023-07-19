@@ -10,9 +10,11 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.fluids.FluidType;
 
 import net.mcreator.test.fluid.types.PoisonFluidType;
+import net.mcreator.test.fluid.types.CoreLavaFluidType;
 import net.mcreator.test.TestMod;
 
 public class TestModFluidTypes {
 	public static final DeferredRegister<FluidType> REGISTRY = DeferredRegister.create(ForgeRegistries.Keys.FLUID_TYPES, TestMod.MODID);
 	public static final RegistryObject<FluidType> POISON_TYPE = REGISTRY.register("poison", () -> new PoisonFluidType());
+	public static final RegistryObject<FluidType> CORE_LAVA_TYPE = REGISTRY.register("core_lava", () -> new CoreLavaFluidType());
 }

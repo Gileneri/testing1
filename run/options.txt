@@ -37,7 +37,7 @@ ao:0
 prioritizeChunkUpdates:0
 biomeBlendRadius:0
 renderClouds:"false"
-resourcePacks:[]
+resourcePacks:["vanilla","mod_resources","file/Dark Peachy Massacre"]
 incompatibleResourcePacks:[]
 lastServer:localhost:25463
 lang:en_us
@@ -70,7 +70,7 @@ glDebugVerbosity:1
 skipMultiplayerWarning:false
 skipRealms32bitWarning:false
 hideMatchedNames:true
-joinedFirstServer:false
+joinedFirstServer:true
 hideBundleTutorial:false
 syncChunkWrites:true
 showAutosaveIndicator:true
@@ -114,7 +114,7 @@ key_key.hotbar.9:key.keyboard.9
 key_key.test.mech_jump:key.keyboard.space
 key_key.test.mm_upgrade_gui_toggle_keybind:key.keyboard.u
 key_key.test.mm_change_mode_keybind:key.keyboard.r
-soundCategory_master:1.0
+soundCategory_master:0.0
 soundCategory_music:0.0
 soundCategory_record:1.0
 soundCategory_weather:1.0

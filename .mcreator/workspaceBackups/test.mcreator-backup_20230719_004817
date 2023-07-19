@@ -1,0 +1,4638 @@
+{
+  "mod_elements": [
+    {
+      "name": "Oceantrent",
+      "type": "biome",
+      "sortid": 13,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "oceantrent",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/test/world/biome/OceantrentBiome.java"
+        ]
+      }
+    },
+    {
+      "name": "Higher",
+      "type": "dimension",
+      "sortid": 1,
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "higher",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/test/world/teleporter/HigherPortalShape.java",
+          "src/main/resources/assets/test/models/block/higher_portal_ew.json",
+          "src/main/java/net/mcreator/test/block/HigherPortalBlock.java",
+          "src/main/resources/assets/test/blockstates/higher_portal.json",
+          "src/main/java/net/mcreator/test/world/teleporter/HigherTeleporter.java",
+          "src/main/java/net/mcreator/test/item/HigherItem.java",
+          "src/main/java/net/mcreator/test/world/dimension/HigherDimension.java",
+          "src/main/resources/data/test/dimension_type/higher.json",
+          "src/main/resources/assets/test/models/block/higher_portal_ns.json",
+          "src/main/resources/data/test/dimension/higher.json",
+          "src/main/resources/assets/test/models/item/higher.json"
+        ]
+      }
+    },
+    {
+      "name": "Poisonwater",
+      "type": "procedure",
+      "sortid": 4,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "poisonwater",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/test/procedures/PoisonwaterProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Poisoned",
+      "type": "potioneffect",
+      "sortid": 94,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "poisoned",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/test/potion/PoisonedMobEffect.java"
+        ]
+      }
+    },
+    {
+      "name": "PoisonMobplayerCollidesBlock",
+      "type": "procedure",
+      "sortid": 5,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "poison_mobplayer_collides_block",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/test/procedures/PoisonMobplayerCollidesBlockProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Poison",
+      "type": "fluid",
+      "sortid": 6,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "poison",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/test/block/PoisonBlock.java",
+          "src/main/resources/assets/test/blockstates/poison.json",
+          "src/main/resources/assets/test/models/block/poison.json",
+          "src/main/resources/assets/test/models/item/poison_bucket.json",
+          "src/main/java/net/mcreator/test/fluid/PoisonFluid.java",
+          "src/main/java/net/mcreator/test/fluid/types/PoisonFluidType.java",
+          "src/main/java/net/mcreator/test/item/PoisonItem.java"
+        ]
+      }
+    },
+    {
+      "name": "PoisonoverlayDisplayOverlayIngame",
+      "type": "procedure",
+      "sortid": 7,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "poisonoverlay_display_overlay_ingame",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/test/procedures/PoisonoverlayDisplayOverlayIngameProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Poisonoverlay",
+      "type": "overlay",
+      "sortid": 247,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "poisonoverlay",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/test/client/screens/PoisonoverlayOverlay.java"
+        ]
+      }
+    },
+    {
+      "name": "Toxicislands",
+      "type": "feature",
+      "sortid": 238,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "toxicislands",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/test/worldgen/configured_feature/toxicislands.json",
+          "src/main/resources/data/test/forge/biome_modifier/toxicislands_biome_modifier.json",
+          "src/main/resources/data/test/worldgen/placed_feature/toxicislands.json",
+          "src/main/java/net/mcreator/test/world/features/ToxicislandsFeature.java"
+        ]
+      }
+    },
+    {
+      "name": "Poisonparticles",
+      "type": "procedure",
+      "sortid": 9,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "poisonparticles",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/test/procedures/PoisonparticlesProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Mattermanipulator1",
+      "type": "procedure",
+      "sortid": 10,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mattermanipulator_1",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/test/procedures/Mattermanipulator1Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Mattermanipulatorbeta",
+      "type": "tool",
+      "sortid": 11,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mattermanipulatorbeta",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/test/models/item/mattermanipulatorbeta.json",
+          "src/main/java/net/mcreator/test/item/MattermanipulatorbetaItem.java"
+        ]
+      }
+    },
+    {
+      "name": "Noise",
+      "type": "biome",
+      "sortid": 12,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "noise",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/test/world/biome/NoiseBiome.java"
+        ]
+      }
+    },
+    {
+      "name": "Testnoise",
+      "type": "dimension",
+      "sortid": 15,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "testnoise",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/test/models/block/testnoise_portal_ew.json",
+          "src/main/resources/assets/test/models/item/testnoise.json",
+          "src/main/java/net/mcreator/test/world/dimension/TestnoiseDimension.java",
+          "src/main/java/net/mcreator/test/block/TestnoisePortalBlock.java",
+          "src/main/resources/data/test/dimension/testnoise.json",
+          "src/main/resources/assets/test/models/block/testnoise_portal_ns.json",
+          "src/main/java/net/mcreator/test/world/teleporter/TestnoisePortalShape.java",
+          "src/main/java/net/mcreator/test/world/teleporter/TestnoiseTeleporter.java",
+          "src/main/java/net/mcreator/test/item/TestnoiseItem.java",
+          "src/main/resources/data/test/dimension_type/testnoise.json",
+          "src/main/resources/assets/test/blockstates/testnoise_portal.json"
+        ]
+      }
+    },
+    {
+      "name": "Ocean",
+      "type": "biome",
+      "sortid": 16,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ocean",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/test/world/biome/OceanBiome.java"
+        ]
+      }
+    },
+    {
+      "name": "Noise1",
+      "type": "biome",
+      "sortid": 17,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "noise_1",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/test/world/biome/Noise1Biome.java"
+        ]
+      }
+    },
+    {
+      "name": "Ocean1",
+      "type": "biome",
+      "sortid": 18,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ocean_1",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/test/world/biome/Ocean1Biome.java"
+        ]
+      }
+    },
+    {
+      "name": "Biomes4",
+      "type": "dimension",
+      "sortid": 19,
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "biomes_4",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/test/models/block/biomes_4_portal_ew.json",
+          "src/main/java/net/mcreator/test/world/dimension/Biomes4Dimension.java",
+          "src/main/resources/data/test/dimension/biomes_4.json",
+          "src/main/resources/data/test/dimension_type/biomes_4.json",
+          "src/main/resources/assets/test/models/block/biomes_4_portal_ns.json",
+          "src/main/java/net/mcreator/test/block/Biomes4PortalBlock.java",
+          "src/main/resources/assets/test/models/item/biomes_4.json",
+          "src/main/java/net/mcreator/test/world/teleporter/Biomes4Teleporter.java",
+          "src/main/java/net/mcreator/test/item/Biomes4Item.java",
+          "src/main/java/net/mcreator/test/world/teleporter/Biomes4PortalShape.java",
+          "src/main/resources/assets/test/blockstates/biomes_4_portal.json"
+        ]
+      }
+    },
+    {
+      "name": "Texture",
+      "type": "block",
+      "sortid": 20,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "texture",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/test/models/block/texture.json",
+          "src/main/resources/assets/test/models/item/texture.json",
+          "src/main/java/net/mcreator/test/block/TextureBlock.java",
+          "src/main/resources/assets/test/blockstates/texture.json"
+        ]
+      }
+    },
+    {
+      "name": "MMUpgradeGUITest",
+      "type": "gui",
+      "sortid": 244,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mm_upgrade_gui_test",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/test/network/MMUpgradeGUITestButtonMessage.java",
+          "src/main/java/net/mcreator/test/world/inventory/MMUpgradeGUITestMenu.java",
+          "src/main/java/net/mcreator/test/client/gui/MMUpgradeGUITestScreen.java"
+        ]
+      }
+    },
+    {
+      "name": "MMUpgradeGUIButtonsCheckPlayerForCurrency",
+      "type": "procedure",
+      "sortid": 21,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mm_upgrade_gui_buttons_check_player_for_currency",
+      "metadata": {
+        "return_type": "number",
+        "files": [
+          "src/main/java/net/mcreator/test/procedures/MMUpgradeGUIButtonsCheckPlayerForCurrencyProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "MMUpgradeGUIButtonWhenClicked1",
+      "type": "procedure",
+      "sortid": 22,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mm_upgrade_gui_button_when_clicked_1",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/test/procedures/MMUpgradeGUIButtonWhenClicked1Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "MMUpgradeGUIButtonWhenClicked2",
+      "type": "procedure",
+      "sortid": 23,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mm_upgrade_gui_button_when_clicked_2",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/test/procedures/MMUpgradeGUIButtonWhenClicked2Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "MMUpgradeGUIButtonWhenClicked3",
+      "type": "procedure",
+      "sortid": 24,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mm_upgrade_gui_button_when_clicked_3",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/test/procedures/MMUpgradeGUIButtonWhenClicked3Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "MMUpgradeGUIButtonWhenClicked4",
+      "type": "procedure",
+      "sortid": 25,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mm_upgrade_gui_button_when_clicked_4",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/test/procedures/MMUpgradeGUIButtonWhenClicked4Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "MMUpgradeGUIButtonWhenClicked5",
+      "type": "procedure",
+      "sortid": 26,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mm_upgrade_gui_button_when_clicked_5",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/test/procedures/MMUpgradeGUIButtonWhenClicked5Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "MMUpgradeGUIButtonWhenClicked6",
+      "type": "procedure",
+      "sortid": 27,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mm_upgrade_gui_button_when_clicked_6",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/test/procedures/MMUpgradeGUIButtonWhenClicked6Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "MMUpgradeGUIButtonWhenClicked7",
+      "type": "procedure",
+      "sortid": 28,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mm_upgrade_gui_button_when_clicked_7",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/test/procedures/MMUpgradeGUIButtonWhenClicked7Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "MMUpgradeGUIButtonWhenClicked8",
+      "type": "procedure",
+      "sortid": 29,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mm_upgrade_gui_button_when_clicked_8",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/test/procedures/MMUpgradeGUIButtonWhenClicked8Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "MMUpgradeGUIButtonWhenClicked9",
+      "type": "procedure",
+      "sortid": 30,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mm_upgrade_gui_button_when_clicked_9",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/test/procedures/MMUpgradeGUIButtonWhenClicked9Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "MMUpgradeGUIButtonWhenClicked10",
+      "type": "procedure",
+      "sortid": 31,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mm_upgrade_gui_button_when_clicked_10",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/test/procedures/MMUpgradeGUIButtonWhenClicked10Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "MMUpgradeGUIButtonWhenClicked11",
+      "type": "procedure",
+      "sortid": 32,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mm_upgrade_gui_button_when_clicked_11",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/test/procedures/MMUpgradeGUIButtonWhenClicked11Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "MMUpgradeGUIButtonWhenClicked12",
+      "type": "procedure",
+      "sortid": 33,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mm_upgrade_gui_button_when_clicked_12",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/test/procedures/MMUpgradeGUIButtonWhenClicked12Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "MMOnRightClick",
+      "type": "procedure",
+      "sortid": 34,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mm_on_right_click",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/test/procedures/MMOnRightClickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "MMUpgradeGUIToggleKeybindOnKeyPressed",
+      "type": "procedure",
+      "sortid": 35,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mm_upgrade_gui_toggle_keybind_on_key_pressed",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/test/procedures/MMUpgradeGUIToggleKeybindOnKeyPressedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "MMUpgradeGUIToggleKeybind",
+      "type": "keybind",
+      "sortid": 67,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mm_upgrade_gui_toggle_keybind",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/test/network/MMUpgradeGUIToggleKeybindMessage.java"
+        ]
+      }
+    },
+    {
+      "name": "MMWhenInHandTick",
+      "type": "procedure",
+      "sortid": 36,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mm_when_in_hand_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/test/procedures/MMWhenInHandTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "BlockIndicatorEntity1",
+      "type": "livingentity",
+      "sortid": 68,
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "block_indicator_entity_1",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/test/client/renderer/BlockIndicatorEntity1Renderer.java",
+          "src/main/java/net/mcreator/test/entity/BlockIndicatorEntity1Entity.java"
+        ]
+      }
+    },
+    {
+      "name": "BlockIndicatorEntity1OnEntityTickUpdate",
+      "type": "procedure",
+      "sortid": 38,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "block_indicator_entity_1_on_entity_tick_update",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/test/procedures/BlockIndicatorEntity1OnEntityTickUpdateProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "SpiralSearchBaseProcedure",
+      "type": "procedure",
+      "sortid": 39,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "spiral_search_base_procedure",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/test/procedures/SpiralSearchBaseProcedureProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "DebugTestTool",
+      "type": "tool",
+      "sortid": 40,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "debug_test_tool",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/test/models/item/debug_test_tool.json",
+          "src/main/java/net/mcreator/test/item/DebugTestToolItem.java"
+        ]
+      }
+    },
+    {
+      "name": "BlockIndicatorEntity1OnInitialEntitySpawn",
+      "type": "procedure",
+      "sortid": 41,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "block_indicator_entity_1_on_initial_entity_spawn",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/test/procedures/BlockIndicatorEntity1OnInitialEntitySpawnProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "MechJumpOnKeyPressed",
+      "type": "procedure",
+      "sortid": 57,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mech_jump_on_key_pressed",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/test/procedures/MechJumpOnKeyPressedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "TestLightBlock",
+      "type": "block",
+      "sortid": 45,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "test_light_block",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/test/models/block/test_light_block.json",
+          "src/main/java/net/mcreator/test/block/TestLightBlockBlock.java",
+          "src/main/resources/assets/test/models/item/test_light_block.json",
+          "src/main/java/net/mcreator/test/block/entity/TestLightBlockBlockEntity.java",
+          "src/main/resources/assets/test/blockstates/test_light_block.json"
+        ]
+      }
+    },
+    {
+      "name": "MechTestBody",
+      "type": "livingentity",
+      "sortid": 48,
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "mech_test_body",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/test/client/renderer/MechTestBodyRenderer.java",
+          "src/main/java/net/mcreator/test/entity/MechTestBodyEntity.java",
+          "src/main/resources/assets/test/models/item/mech_test_body_spawn_egg.json"
+        ]
+      }
+    },
+    {
+      "name": "MechTestLegLeft",
+      "type": "livingentity",
+      "sortid": 53,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mech_test_leg_left",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/test/client/renderer/MechTestLegLeftRenderer.java",
+          "src/main/java/net/mcreator/test/entity/MechTestLegLeftEntity.java"
+        ]
+      }
+    },
+    {
+      "name": "VanillaGlazedTerracottaBlockTag",
+      "type": "tag",
+      "sortid": 65,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "vanilla_glazed_terracotta_block_tag",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/test/tags/blocks/vanilla_glazed_terracotta_block_tag.json"
+        ]
+      }
+    },
+    {
+      "name": "MechTestLegRight",
+      "type": "livingentity",
+      "sortid": 54,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mech_test_leg_right",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/test/entity/MechTestLegRightEntity.java",
+          "src/main/java/net/mcreator/test/client/renderer/MechTestLegRightRenderer.java"
+        ]
+      }
+    },
+    {
+      "name": "MechTestBodyOnInitialEntitySpawn",
+      "type": "procedure",
+      "sortid": 55,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mech_test_body_on_initial_entity_spawn",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/test/procedures/MechTestBodyOnInitialEntitySpawnProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "VanillaStainedGlassPaneBlockTag",
+      "type": "tag",
+      "sortid": 66,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "vanilla_stained_glass_pane_block_tag",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/test/tags/blocks/vanilla_stained_glass_pane_block_tag.json"
+        ]
+      }
+    },
+    {
+      "name": "MechTestBodyOnTickUpdate",
+      "type": "procedure",
+      "sortid": 60,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mech_test_body_on_tick_update",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/test/procedures/MechTestBodyOnTickUpdateProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "DebugTestToolEntitySwingsItem",
+      "type": "procedure",
+      "sortid": 64,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "debug_test_tool_entity_swings_item",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/test/procedures/DebugTestToolEntitySwingsItemProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "MechTestPartsOnEntityTickUpdate",
+      "type": "procedure",
+      "sortid": 51,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mech_test_parts_on_entity_tick_update",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/test/procedures/MechTestPartsOnEntityTickUpdateProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "VanillaConcreteBlockTag",
+      "type": "tag",
+      "sortid": 63,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "vanilla_concrete_block_tag",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/test/tags/blocks/vanilla_concrete_block_tag.json"
+        ]
+      }
+    },
+    {
+      "name": "MechTestArmRight",
+      "type": "livingentity",
+      "sortid": 52,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mech_test_arm_right",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/test/entity/MechTestArmRightEntity.java",
+          "src/main/java/net/mcreator/test/client/renderer/MechTestArmRightRenderer.java"
+        ]
+      }
+    },
+    {
+      "name": "MMPaintingProcedure",
+      "type": "procedure",
+      "sortid": 61,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mm_painting_procedure",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/test/procedures/MMPaintingProcedureProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "FlashlightTest",
+      "type": "procedure",
+      "sortid": 46,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "flashlight_test",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/test/procedures/FlashlightTestProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "TestLightBlockUpdateTick",
+      "type": "procedure",
+      "sortid": 47,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "test_light_block_update_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/test/procedures/TestLightBlockUpdateTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "MechTestArmLeft",
+      "type": "livingentity",
+      "sortid": 50,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mech_test_arm_left",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/test/client/renderer/MechTestArmLeftRenderer.java",
+          "src/main/java/net/mcreator/test/entity/MechTestArmLeftEntity.java"
+        ]
+      }
+    },
+    {
+      "name": "MechJump",
+      "type": "keybind",
+      "sortid": 58,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mech_jump",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/test/network/MechJumpMessage.java"
+        ]
+      }
+    },
+    {
+      "name": "PlayerControlMechVerticalMovement",
+      "type": "procedure",
+      "sortid": 56,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "player_control_mech_vertical_movement",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/test/procedures/PlayerControlMechVerticalMovementProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Plains1",
+      "type": "biome",
+      "sortid": 22,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "plains_1",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/test/world/biome/Plains1Biome.java"
+        ]
+      }
+    },
+    {
+      "name": "MattermanipulatorbetaChangeMode",
+      "type": "procedure",
+      "sortid": 69,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mattermanipulatorbeta_change_mode",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/test/procedures/MattermanipulatorbetaChangeModeProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "DyeItemTag",
+      "type": "tag",
+      "sortid": 70,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "dye_item_tag",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/test/tags/items/dye_item_tag.json"
+        ]
+      }
+    },
+    {
+      "name": "MMWiringProcedure",
+      "type": "procedure",
+      "sortid": 71,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mm_wiring_procedure",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/test/procedures/MMWiringProcedureProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "MMChangeModeKeybind",
+      "type": "keybind",
+      "sortid": 72,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mm_change_mode_keybind",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/test/network/MMChangeModeKeybindMessage.java"
+        ]
+      }
+    },
+    {
+      "name": "TestButton",
+      "type": "block",
+      "sortid": 73,
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "test_button",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/test/blockstates/test_button.json",
+          "src/main/resources/assets/test/models/block/test_button_pressed.json",
+          "src/main/java/net/mcreator/test/block/TestButtonBlock.java",
+          "src/main/resources/assets/test/models/block/test_button.json",
+          "src/main/resources/assets/test/models/block/test_button_inventory.json",
+          "src/main/java/net/mcreator/test/block/entity/TestButtonBlockEntity.java",
+          "src/main/resources/assets/test/models/item/test_button.json"
+        ]
+      }
+    },
+    {
+      "name": "TestDoor",
+      "type": "block",
+      "sortid": 78,
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "test_door",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/test/block/entity/TestDoorBlockEntity.java",
+          "src/main/resources/assets/test/models/block/test_door_top_left.json",
+          "src/main/resources/assets/test/blockstates/test_door.json",
+          "src/main/resources/assets/test/models/block/test_door_bottom_right.json",
+          "src/main/resources/assets/test/models/block/test_door_top_right.json",
+          "src/main/resources/assets/test/models/block/test_door_bottom_left_open.json",
+          "src/main/resources/assets/test/models/block/test_door_bottom_left.json",
+          "src/main/resources/assets/test/models/block/test_door_top_left_open.json",
+          "src/main/resources/assets/test/models/block/test_door_bottom_right_open.json",
+          "src/main/java/net/mcreator/test/block/TestDoorBlock.java",
+          "src/main/resources/assets/test/models/item/test_door.json",
+          "src/main/resources/assets/test/models/block/test_door_top_right_open.json"
+        ]
+      }
+    },
+    {
+      "name": "MMExamineProcedure",
+      "type": "procedure",
+      "sortid": 81,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mm_examine_procedure",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/test/procedures/MMExamineProcedureProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "MMWireTriggerBlock",
+      "type": "procedure",
+      "sortid": 82,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mm_wire_trigger_block",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/test/procedures/MMWireTriggerBlockProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "MMWireDoorOpenClose",
+      "type": "procedure",
+      "sortid": 83,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mm_wire_door_open_close",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/test/procedures/MMWireDoorOpenCloseProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "BlockIndicatorEntity2",
+      "type": "livingentity",
+      "sortid": 84,
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "block_indicator_entity_2",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/test/entity/BlockIndicatorEntity2Entity.java",
+          "src/main/java/net/mcreator/test/client/renderer/BlockIndicatorEntity2Renderer.java"
+        ]
+      }
+    },
+    {
+      "name": "MMWirableBlockTag",
+      "type": "tag",
+      "sortid": 85,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mm_wirable_block_tag",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/forge/tags/blocks/mm_wirable.json"
+        ]
+      }
+    },
+    {
+      "name": "MMWiringTagReset",
+      "type": "procedure",
+      "sortid": 86,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mm_wiring_tag_reset",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/test/procedures/MMWiringTagResetProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          }
+        ]
+      }
+    },
+    {
+      "name": "TestPressurePlate",
+      "type": "block",
+      "sortid": 87,
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "test_pressure_plate",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/test/models/item/test_pressure_plate.json",
+          "src/main/resources/assets/test/models/block/test_pressure_plate_down.json",
+          "src/main/java/net/mcreator/test/block/entity/TestPressurePlateBlockEntity.java",
+          "src/main/java/net/mcreator/test/block/TestPressurePlateBlock.java",
+          "src/main/resources/assets/test/models/block/test_pressure_plate.json",
+          "src/main/resources/assets/test/blockstates/test_pressure_plate.json"
+        ]
+      }
+    },
+    {
+      "name": "TestLightOff",
+      "type": "block",
+      "sortid": 88,
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "test_light_off",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/test/models/item/test_light_off.json",
+          "src/main/resources/assets/test/models/block/test_light_off.json",
+          "src/main/resources/assets/test/models/block/test_light_off_top.json",
+          "src/main/java/net/mcreator/test/block/TestLightOffBlock.java",
+          "src/main/resources/assets/test/models/block/test_light_off_full.json",
+          "src/main/java/net/mcreator/test/block/entity/TestLightOffBlockEntity.java",
+          "src/main/resources/assets/test/blockstates/test_light_off.json"
+        ]
+      }
+    },
+    {
+      "name": "MMWireLightOnOff",
+      "type": "procedure",
+      "sortid": 89,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mm_wire_light_on_off",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/test/procedures/MMWireLightOnOffProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "TestLightOn",
+      "type": "block",
+      "sortid": 90,
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "test_light_on",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/test/models/block/test_light_on_top.json",
+          "src/main/java/net/mcreator/test/block/TestLightOnBlock.java",
+          "src/main/resources/assets/test/blockstates/test_light_on.json",
+          "src/main/resources/assets/test/models/item/test_light_on.json",
+          "src/main/resources/assets/test/models/block/test_light_on_full.json",
+          "src/main/java/net/mcreator/test/block/entity/TestLightOnBlockEntity.java",
+          "src/main/resources/assets/test/models/block/test_light_on.json"
+        ]
+      }
+    },
+    {
+      "name": "ShieldGeneratorEffectOnEffectActiveTick",
+      "type": "procedure",
+      "sortid": 91,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "shield_generator_effect_on_effect_active_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/test/procedures/ShieldGeneratorEffectOnEffectActiveTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "ShieldGeneratorEffectEffectExpires",
+      "type": "procedure",
+      "sortid": 92,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "shield_generator_effect_effect_expires",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/test/procedures/ShieldGeneratorEffectEffectExpiresProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "ShieldGeneratorEffect",
+      "type": "potioneffect",
+      "sortid": 93,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "shield_generator_effect",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/test/potion/ShieldGeneratorEffectMobEffect.java"
+        ]
+      }
+    },
+    {
+      "name": "BlockIndicatorEntity3",
+      "type": "livingentity",
+      "sortid": 95,
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "block_indicator_entity_3",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/test/entity/BlockIndicatorEntity3Entity.java",
+          "src/main/java/net/mcreator/test/client/renderer/BlockIndicatorEntity3Renderer.java"
+        ]
+      }
+    },
+    {
+      "name": "TestRedstoneOff",
+      "type": "block",
+      "sortid": 96,
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "test_redstone_off",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/test/block/entity/TestRedstoneOffBlockEntity.java",
+          "src/main/java/net/mcreator/test/block/TestRedstoneOffBlock.java",
+          "src/main/resources/assets/test/models/block/test_redstone_off.json",
+          "src/main/resources/assets/test/models/item/test_redstone_off.json",
+          "src/main/resources/assets/test/blockstates/test_redstone_off.json"
+        ]
+      }
+    },
+    {
+      "name": "TestRedstoneOn",
+      "type": "block",
+      "sortid": 97,
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "test_redstone_on",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/test/block/entity/TestRedstoneOnBlockEntity.java",
+          "src/main/resources/assets/test/models/block/test_redstone_on.json",
+          "src/main/java/net/mcreator/test/block/TestRedstoneOnBlock.java",
+          "src/main/resources/assets/test/models/item/test_redstone_on.json",
+          "src/main/resources/assets/test/blockstates/test_redstone_on.json"
+        ]
+      }
+    },
+    {
+      "name": "AddScore",
+      "type": "procedure",
+      "sortid": 100,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "add_score",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/test/procedures/AddScoreProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "TestWeaponDagger",
+      "type": "tool",
+      "sortid": 101,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "test_weapon_dagger",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/test/models/item/test_weapon_dagger.json",
+          "src/main/java/net/mcreator/test/item/TestWeaponDaggerItem.java"
+        ]
+      }
+    },
+    {
+      "name": "TestWeaponShortsword",
+      "type": "tool",
+      "sortid": 102,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "test_weapon_shortsword",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/test/item/TestWeaponShortswordItem.java",
+          "src/main/resources/assets/test/models/item/test_weapon_shortsword.json"
+        ]
+      }
+    },
+    {
+      "name": "TestWeaponAxe",
+      "type": "tool",
+      "sortid": 103,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "test_weapon_axe",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/test/models/item/test_weapon_axe.json",
+          "src/main/java/net/mcreator/test/item/TestWeaponAxeItem.java"
+        ]
+      }
+    },
+    {
+      "name": "TestWeaponTag",
+      "type": "tag",
+      "sortid": 104,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "test_weapon_tag",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/test/tags/items/test_weapon_tag.json"
+        ]
+      }
+    },
+    {
+      "name": "GleapMob",
+      "type": "livingentity",
+      "sortid": 111,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "gleap_mob",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/test/models/item/gleap_mob_spawn_egg.json",
+          "src/main/java/net/mcreator/test/client/renderer/GleapMobRenderer.java",
+          "src/main/java/net/mcreator/test/entity/GleapMobEntity.java"
+        ]
+      }
+    },
+    {
+      "name": "DebugTestToolToolInHandTick",
+      "type": "procedure",
+      "sortid": 112,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "debug_test_tool_tool_in_hand_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/test/procedures/DebugTestToolToolInHandTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "TestMonsterStatItem",
+      "type": "item",
+      "sortid": 114,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "test_monster_stat_item",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/test/item/TestMonsterStatItemItem.java",
+          "src/main/resources/assets/test/models/item/test_monster_stat_item.json"
+        ]
+      }
+    },
+    {
+      "name": "MobOnInitialEntitySpawnStatScaling",
+      "type": "procedure",
+      "sortid": 115,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mob_on_initial_entity_spawn_stat_scaling",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/test/procedures/MobOnInitialEntitySpawnStatScalingProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "NutmidgeMob",
+      "type": "livingentity",
+      "sortid": 116,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "nutmidge_mob",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/test/client/renderer/NutmidgeMobRenderer.java",
+          "src/main/resources/assets/test/models/item/nutmidge_mob_spawn_egg.json",
+          "src/main/java/net/mcreator/test/entity/NutmidgeMobEntity.java"
+        ]
+      }
+    },
+    {
+      "name": "NutmidgeMobCharging",
+      "type": "livingentity",
+      "sortid": 117,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "nutmidge_mob_charging",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/test/entity/NutmidgeMobChargingEntity.java",
+          "src/main/java/net/mcreator/test/client/renderer/NutmidgeMobChargingRenderer.java"
+        ]
+      }
+    },
+    {
+      "name": "NutmidgelingMob",
+      "type": "livingentity",
+      "sortid": 118,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "nutmidgeling_mob",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/test/models/item/nutmidgeling_mob_spawn_egg.json",
+          "src/main/java/net/mcreator/test/client/renderer/NutmidgelingMobRenderer.java",
+          "src/main/java/net/mcreator/test/entity/NutmidgelingMobEntity.java"
+        ]
+      }
+    },
+    {
+      "name": "KingNutmidgelingMob",
+      "type": "livingentity",
+      "sortid": 119,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "king_nutmidgeling_mob",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/test/models/item/king_nutmidgeling_mob_spawn_egg.json",
+          "src/main/java/net/mcreator/test/client/renderer/KingNutmidgelingMobRenderer.java",
+          "src/main/java/net/mcreator/test/entity/KingNutmidgelingMobEntity.java"
+        ]
+      }
+    },
+    {
+      "name": "PoptopMob",
+      "type": "livingentity",
+      "sortid": 120,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "poptop_mob",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/test/entity/PoptopMobEntity.java",
+          "src/main/resources/assets/test/models/item/poptop_mob_spawn_egg.json",
+          "src/main/java/net/mcreator/test/client/renderer/PoptopMobRenderer.java"
+        ]
+      }
+    },
+    {
+      "name": "AdultPoptopMob",
+      "type": "livingentity",
+      "sortid": 121,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "adult_poptop_mob",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/test/entity/AdultPoptopMobEntity.java",
+          "src/main/resources/assets/test/models/item/adult_poptop_mob_spawn_egg.json",
+          "src/main/java/net/mcreator/test/client/renderer/AdultPoptopMobRenderer.java"
+        ]
+      }
+    },
+    {
+      "name": "CrustoiseMob",
+      "type": "livingentity",
+      "sortid": 122,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "crustoise_mob",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/test/models/item/crustoise_mob_spawn_egg.json",
+          "src/main/java/net/mcreator/test/entity/CrustoiseMobEntity.java",
+          "src/main/java/net/mcreator/test/client/renderer/CrustoiseMobRenderer.java"
+        ]
+      }
+    },
+    {
+      "name": "CrustoiseMobCharging",
+      "type": "livingentity",
+      "sortid": 123,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "crustoise_mob_charging",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/test/client/renderer/CrustoiseMobChargingRenderer.java",
+          "src/main/java/net/mcreator/test/entity/CrustoiseMobChargingEntity.java"
+        ]
+      }
+    },
+    {
+      "name": "TinticMob",
+      "type": "livingentity",
+      "sortid": 124,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "tintic_mob",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/test/entity/TinticMobEntity.java",
+          "src/main/resources/assets/test/models/item/tintic_mob_spawn_egg.json",
+          "src/main/java/net/mcreator/test/client/renderer/TinticMobRenderer.java"
+        ]
+      }
+    },
+    {
+      "name": "BatongMob",
+      "type": "livingentity",
+      "sortid": 125,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "batong_mob",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/test/entity/BatongMobEntity.java",
+          "src/main/resources/assets/test/models/item/batong_mob_spawn_egg.json",
+          "src/main/java/net/mcreator/test/client/renderer/BatongMobRenderer.java"
+        ]
+      }
+    },
+    {
+      "name": "BatongMobResting",
+      "type": "livingentity",
+      "sortid": 126,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "batong_mob_resting",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/test/entity/BatongMobRestingEntity.java",
+          "src/main/java/net/mcreator/test/client/renderer/BatongMobRestingRenderer.java"
+        ]
+      }
+    },
+    {
+      "name": "SpookitMob",
+      "type": "livingentity",
+      "sortid": 127,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "spookit_mob",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/test/models/item/spookit_mob_spawn_egg.json",
+          "src/main/java/net/mcreator/test/entity/SpookitMobEntity.java",
+          "src/main/java/net/mcreator/test/client/renderer/SpookitMobRenderer.java"
+        ]
+      }
+    },
+    {
+      "name": "PeblitMob",
+      "type": "livingentity",
+      "sortid": 128,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "peblit_mob",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/test/client/renderer/PeblitMobRenderer.java",
+          "src/main/java/net/mcreator/test/entity/PeblitMobEntity.java",
+          "src/main/resources/assets/test/models/item/peblit_mob_spawn_egg.json"
+        ]
+      }
+    },
+    {
+      "name": "PeblitMobResting",
+      "type": "livingentity",
+      "sortid": 129,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "peblit_mob_resting",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/test/client/renderer/PeblitMobRestingRenderer.java",
+          "src/main/java/net/mcreator/test/entity/PeblitMobRestingEntity.java"
+        ]
+      }
+    },
+    {
+      "name": "IguarmorMob",
+      "type": "livingentity",
+      "sortid": 130,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "iguarmor_mob",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/test/entity/IguarmorMobEntity.java",
+          "src/main/resources/assets/test/models/item/iguarmor_mob_spawn_egg.json",
+          "src/main/java/net/mcreator/test/client/renderer/IguarmorMobRenderer.java"
+        ]
+      }
+    },
+    {
+      "name": "ScaveranMob",
+      "type": "livingentity",
+      "sortid": 131,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "scaveran_mob",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/test/client/renderer/ScaveranMobRenderer.java",
+          "src/main/resources/assets/test/models/item/scaveran_mob_spawn_egg.json",
+          "src/main/java/net/mcreator/test/entity/ScaveranMobEntity.java"
+        ]
+      }
+    },
+    {
+      "name": "VoltipMob",
+      "type": "livingentity",
+      "sortid": 132,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "voltip_mob",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/test/models/item/voltip_mob_spawn_egg.json",
+          "src/main/java/net/mcreator/test/client/renderer/VoltipMobRenderer.java",
+          "src/main/java/net/mcreator/test/entity/VoltipMobEntity.java"
+        ]
+      }
+    },
+    {
+      "name": "FennixMob",
+      "type": "livingentity",
+      "sortid": 133,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fennix_mob",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/test/client/renderer/FennixMobRenderer.java",
+          "src/main/java/net/mcreator/test/entity/FennixMobEntity.java",
+          "src/main/resources/assets/test/models/item/fennix_mob_spawn_egg.json"
+        ]
+      }
+    },
+    {
+      "name": "LilodonMob",
+      "type": "livingentity",
+      "sortid": 134,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "lilodon_mob",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/test/models/item/lilodon_mob_spawn_egg.json",
+          "src/main/java/net/mcreator/test/entity/LilodonMobEntity.java",
+          "src/main/java/net/mcreator/test/client/renderer/LilodonMobRenderer.java"
+        ]
+      }
+    },
+    {
+      "name": "PetricubMob",
+      "type": "livingentity",
+      "sortid": 135,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "petricub_mob",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/test/models/item/petricub_mob_spawn_egg.json",
+          "src/main/java/net/mcreator/test/entity/PetricubMobEntity.java",
+          "src/main/java/net/mcreator/test/client/renderer/PetricubMobRenderer.java"
+        ]
+      }
+    },
+    {
+      "name": "ParatailMob",
+      "type": "livingentity",
+      "sortid": 136,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "paratail_mob",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/test/client/renderer/ParatailMobRenderer.java",
+          "src/main/resources/assets/test/models/item/paratail_mob_spawn_egg.json",
+          "src/main/java/net/mcreator/test/entity/ParatailMobEntity.java"
+        ]
+      }
+    },
+    {
+      "name": "WisperMob",
+      "type": "livingentity",
+      "sortid": 137,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "wisper_mob",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/test/client/renderer/WisperMobRenderer.java",
+          "src/main/java/net/mcreator/test/entity/WisperMobEntity.java",
+          "src/main/resources/assets/test/models/item/wisper_mob_spawn_egg.json"
+        ]
+      }
+    },
+    {
+      "name": "SkimbusMob",
+      "type": "livingentity",
+      "sortid": 138,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "skimbus_mob",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/test/models/item/skimbus_mob_spawn_egg.json",
+          "src/main/java/net/mcreator/test/client/renderer/SkimbusMobRenderer.java",
+          "src/main/java/net/mcreator/test/entity/SkimbusMobEntity.java"
+        ]
+      }
+    },
+    {
+      "name": "PulpinMob",
+      "type": "livingentity",
+      "sortid": 139,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "pulpin_mob",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/test/entity/PulpinMobEntity.java",
+          "src/main/java/net/mcreator/test/client/renderer/PulpinMobRenderer.java",
+          "src/main/resources/assets/test/models/item/pulpin_mob_spawn_egg.json"
+        ]
+      }
+    },
+    {
+      "name": "CapricoatMob",
+      "type": "livingentity",
+      "sortid": 140,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "capricoat_mob",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/test/models/item/capricoat_mob_spawn_egg.json",
+          "src/main/java/net/mcreator/test/client/renderer/CapricoatMobRenderer.java",
+          "src/main/java/net/mcreator/test/entity/CapricoatMobEntity.java"
+        ]
+      }
+    },
+    {
+      "name": "ScandroidMob",
+      "type": "livingentity",
+      "sortid": 141,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "scandroid_mob",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/test/client/renderer/ScandroidMobRenderer.java",
+          "src/main/java/net/mcreator/test/entity/ScandroidMobEntity.java",
+          "src/main/resources/assets/test/models/item/scandroid_mob_spawn_egg.json"
+        ]
+      }
+    },
+    {
+      "name": "ScandroidMobCharging",
+      "type": "livingentity",
+      "sortid": 144,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "scandroid_mob_charging",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/test/client/renderer/ScandroidMobChargingRenderer.java",
+          "src/main/java/net/mcreator/test/entity/ScandroidMobChargingEntity.java"
+        ]
+      }
+    },
+    {
+      "name": "BobotMob",
+      "type": "livingentity",
+      "sortid": 145,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "bobot_mob",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/test/entity/BobotMobEntity.java",
+          "src/main/resources/assets/test/models/item/bobot_mob_spawn_egg.json",
+          "src/main/java/net/mcreator/test/client/renderer/BobotMobRenderer.java"
+        ]
+      }
+    },
+    {
+      "name": "BobotMobCharging",
+      "type": "livingentity",
+      "sortid": 146,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "bobot_mob_charging",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/test/entity/BobotMobChargingEntity.java",
+          "src/main/java/net/mcreator/test/client/renderer/BobotMobChargingRenderer.java"
+        ]
+      }
+    },
+    {
+      "name": "MonopusMob",
+      "type": "livingentity",
+      "sortid": 147,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "monopus_mob",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/test/models/item/monopus_mob_spawn_egg.json",
+          "src/main/java/net/mcreator/test/client/renderer/MonopusMobRenderer.java",
+          "src/main/java/net/mcreator/test/entity/MonopusMobEntity.java"
+        ]
+      }
+    },
+    {
+      "name": "MonopusMobCharging",
+      "type": "livingentity",
+      "sortid": 149,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "monopus_mob_charging",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/test/entity/MonopusMobChargingEntity.java",
+          "src/main/java/net/mcreator/test/client/renderer/MonopusMobChargingRenderer.java"
+        ]
+      }
+    },
+    {
+      "name": "SnagglerMob",
+      "type": "livingentity",
+      "sortid": 150,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "snaggler_mob",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/test/entity/SnagglerMobEntity.java",
+          "src/main/java/net/mcreator/test/client/renderer/SnagglerMobRenderer.java",
+          "src/main/resources/assets/test/models/item/snaggler_mob_spawn_egg.json"
+        ]
+      }
+    },
+    {
+      "name": "OculobMob",
+      "type": "livingentity",
+      "sortid": 151,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "oculob_mob",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/test/client/renderer/OculobMobRenderer.java",
+          "src/main/java/net/mcreator/test/entity/OculobMobEntity.java",
+          "src/main/resources/assets/test/models/item/oculob_mob_spawn_egg.json"
+        ]
+      }
+    },
+    {
+      "name": "MiasmopMob",
+      "type": "livingentity",
+      "sortid": 152,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "miasmop_mob",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/test/client/renderer/MiasmopMobRenderer.java",
+          "src/main/java/net/mcreator/test/entity/MiasmopMobEntity.java",
+          "src/main/resources/assets/test/models/item/miasmop_mob_spawn_egg.json"
+        ]
+      }
+    },
+    {
+      "name": "AgrobatMob",
+      "type": "livingentity",
+      "sortid": 153,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "agrobat_mob",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/test/entity/AgrobatMobEntity.java",
+          "src/main/java/net/mcreator/test/client/renderer/AgrobatMobRenderer.java",
+          "src/main/resources/assets/test/models/item/agrobat_mob_spawn_egg.json"
+        ]
+      }
+    },
+    {
+      "name": "AgrobatMobResting",
+      "type": "livingentity",
+      "sortid": 154,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "agrobat_mob_resting",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/test/client/renderer/AgrobatMobRestingRenderer.java",
+          "src/main/java/net/mcreator/test/entity/AgrobatMobRestingEntity.java"
+        ]
+      }
+    },
+    {
+      "name": "SqueemMob",
+      "type": "livingentity",
+      "sortid": 155,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "squeem_mob",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/test/models/item/squeem_mob_spawn_egg.json",
+          "src/main/java/net/mcreator/test/entity/SqueemMobEntity.java",
+          "src/main/java/net/mcreator/test/client/renderer/SqueemMobRenderer.java"
+        ]
+      }
+    },
+    {
+      "name": "SnauntMob",
+      "type": "livingentity",
+      "sortid": 156,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "snaunt_mob",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/test/entity/SnauntMobEntity.java",
+          "src/main/java/net/mcreator/test/client/renderer/SnauntMobRenderer.java",
+          "src/main/resources/assets/test/models/item/snaunt_mob_spawn_egg.json"
+        ]
+      }
+    },
+    {
+      "name": "PetropodMob",
+      "type": "livingentity",
+      "sortid": 157,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "petropod_mob",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/test/entity/PetropodMobEntity.java",
+          "src/main/java/net/mcreator/test/client/renderer/PetropodMobRenderer.java",
+          "src/main/resources/assets/test/models/item/petropod_mob_spawn_egg.json"
+        ]
+      }
+    },
+    {
+      "name": "CrutterMob",
+      "type": "livingentity",
+      "sortid": 158,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "crutter_mob",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/test/models/item/crutter_mob_spawn_egg.json",
+          "src/main/java/net/mcreator/test/entity/CrutterMobEntity.java",
+          "src/main/java/net/mcreator/test/client/renderer/CrutterMobRenderer.java"
+        ]
+      }
+    },
+    {
+      "name": "SnuffishMob",
+      "type": "livingentity",
+      "sortid": 159,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "snuffish_mob",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/test/entity/SnuffishMobEntity.java",
+          "src/main/resources/assets/test/models/item/snuffish_mob_spawn_egg.json",
+          "src/main/java/net/mcreator/test/client/renderer/SnuffishMobRenderer.java"
+        ]
+      }
+    },
+    {
+      "name": "CrabcanoMob",
+      "type": "livingentity",
+      "sortid": 160,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "crabcano_mob",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/test/models/item/crabcano_mob_spawn_egg.json",
+          "src/main/java/net/mcreator/test/entity/CrabcanoMobEntity.java",
+          "src/main/java/net/mcreator/test/client/renderer/CrabcanoMobRenderer.java"
+        ]
+      }
+    },
+    {
+      "name": "PyromantleMob",
+      "type": "livingentity",
+      "sortid": 161,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "pyromantle_mob",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/test/client/renderer/PyromantleMobRenderer.java",
+          "src/main/java/net/mcreator/test/entity/PyromantleMobEntity.java",
+          "src/main/resources/assets/test/models/item/pyromantle_mob_spawn_egg.json"
+        ]
+      }
+    },
+    {
+      "name": "IgnomeMob",
+      "type": "livingentity",
+      "sortid": 162,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ignome_mob",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/test/client/renderer/IgnomeMobRenderer.java",
+          "src/main/resources/assets/test/models/item/ignome_mob_spawn_egg.json",
+          "src/main/java/net/mcreator/test/entity/IgnomeMobEntity.java"
+        ]
+      }
+    },
+    {
+      "name": "SmoglinMob",
+      "type": "livingentity",
+      "sortid": 163,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "smoglin_mob",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/test/models/item/smoglin_mob_spawn_egg.json",
+          "src/main/java/net/mcreator/test/client/renderer/SmoglinMobRenderer.java",
+          "src/main/java/net/mcreator/test/entity/SmoglinMobEntity.java"
+        ]
+      }
+    },
+    {
+      "name": "BobfaeMob",
+      "type": "livingentity",
+      "sortid": 164,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "bobfae_mob",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/test/models/item/bobfae_mob_spawn_egg.json",
+          "src/main/java/net/mcreator/test/client/renderer/BobfaeMobRenderer.java",
+          "src/main/java/net/mcreator/test/entity/BobfaeMobEntity.java"
+        ]
+      }
+    },
+    {
+      "name": "ErchiusGhostMob",
+      "type": "livingentity",
+      "sortid": 165,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "erchius_ghost_mob",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/test/models/item/erchius_ghost_mob_spawn_egg.json",
+          "src/main/java/net/mcreator/test/client/renderer/ErchiusGhostMobRenderer.java",
+          "src/main/java/net/mcreator/test/entity/ErchiusGhostMobEntity.java"
+        ]
+      }
+    },
+    {
+      "name": "QuagmuttMob",
+      "type": "livingentity",
+      "sortid": 166,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "quagmutt_mob",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/test/client/renderer/QuagmuttMobRenderer.java",
+          "src/main/java/net/mcreator/test/entity/QuagmuttMobEntity.java",
+          "src/main/resources/assets/test/models/item/quagmutt_mob_spawn_egg.json"
+        ]
+      }
+    },
+    {
+      "name": "RingramMob",
+      "type": "livingentity",
+      "sortid": 167,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ringram_mob",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/test/entity/RingramMobEntity.java",
+          "src/main/java/net/mcreator/test/client/renderer/RingramMobRenderer.java",
+          "src/main/resources/assets/test/models/item/ringram_mob_spawn_egg.json"
+        ]
+      }
+    },
+    {
+      "name": "PipkinMob",
+      "type": "livingentity",
+      "sortid": 168,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "pipkin_mob",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/test/models/item/pipkin_mob_spawn_egg.json",
+          "src/main/java/net/mcreator/test/entity/PipkinMobEntity.java",
+          "src/main/java/net/mcreator/test/client/renderer/PipkinMobRenderer.java"
+        ]
+      }
+    },
+    {
+      "name": "SporgusMob",
+      "type": "livingentity",
+      "sortid": 169,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "sporgus_mob",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/test/models/item/sporgus_mob_spawn_egg.json",
+          "src/main/java/net/mcreator/test/client/renderer/SporgusMobRenderer.java",
+          "src/main/java/net/mcreator/test/entity/SporgusMobEntity.java"
+        ]
+      }
+    },
+    {
+      "name": "AnglureMob",
+      "type": "livingentity",
+      "sortid": 170,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "anglure_mob",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/test/models/item/anglure_mob_spawn_egg.json",
+          "src/main/java/net/mcreator/test/client/renderer/AnglureMobRenderer.java",
+          "src/main/java/net/mcreator/test/entity/AnglureMobEntity.java"
+        ]
+      }
+    },
+    {
+      "name": "LumothMob",
+      "type": "livingentity",
+      "sortid": 171,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "lumoth_mob",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/test/entity/LumothMobEntity.java",
+          "src/main/java/net/mcreator/test/client/renderer/LumothMobRenderer.java",
+          "src/main/resources/assets/test/models/item/lumoth_mob_spawn_egg.json"
+        ]
+      }
+    },
+    {
+      "name": "OoglerMob",
+      "type": "livingentity",
+      "sortid": 172,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "oogler_mob",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/test/entity/OoglerMobEntity.java",
+          "src/main/resources/assets/test/models/item/oogler_mob_spawn_egg.json",
+          "src/main/java/net/mcreator/test/client/renderer/OoglerMobRenderer.java"
+        ]
+      }
+    },
+    {
+      "name": "NarfinMob",
+      "type": "livingentity",
+      "sortid": 173,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "narfin_mob",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/test/client/renderer/NarfinMobRenderer.java",
+          "src/main/java/net/mcreator/test/entity/NarfinMobEntity.java",
+          "src/main/resources/assets/test/models/item/narfin_mob_spawn_egg.json"
+        ]
+      }
+    },
+    {
+      "name": "ToumingoMob",
+      "type": "livingentity",
+      "sortid": 174,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "toumingo_mob",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/test/models/item/toumingo_mob_spawn_egg.json",
+          "src/main/java/net/mcreator/test/client/renderer/ToumingoMobRenderer.java",
+          "src/main/java/net/mcreator/test/entity/ToumingoMobEntity.java"
+        ]
+      }
+    },
+    {
+      "name": "TrictusMob",
+      "type": "livingentity",
+      "sortid": 175,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "trictus_mob",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/test/client/renderer/TrictusMobRenderer.java",
+          "src/main/java/net/mcreator/test/entity/TrictusMobEntity.java",
+          "src/main/resources/assets/test/models/item/trictus_mob_spawn_egg.json"
+        ]
+      }
+    },
+    {
+      "name": "TrictusMobResting",
+      "type": "livingentity",
+      "sortid": 176,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "trictus_mob_resting",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/test/client/renderer/TrictusMobRestingRenderer.java",
+          "src/main/java/net/mcreator/test/entity/TrictusMobRestingEntity.java"
+        ]
+      }
+    },
+    {
+      "name": "MandrafloraMob",
+      "type": "livingentity",
+      "sortid": 177,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mandraflora_mob",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/test/client/renderer/MandrafloraMobRenderer.java",
+          "src/main/java/net/mcreator/test/entity/MandrafloraMobEntity.java",
+          "src/main/resources/assets/test/models/item/mandraflora_mob_spawn_egg.json"
+        ]
+      }
+    },
+    {
+      "name": "BulbopMob",
+      "type": "livingentity",
+      "sortid": 178,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "bulbop_mob",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/test/models/item/bulbop_mob_spawn_egg.json",
+          "src/main/java/net/mcreator/test/client/renderer/BulbopMobRenderer.java",
+          "src/main/java/net/mcreator/test/entity/BulbopMobEntity.java"
+        ]
+      }
+    },
+    {
+      "name": "HypnareMob",
+      "type": "livingentity",
+      "sortid": 179,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "hypnare_mob",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/test/models/item/hypnare_mob_spawn_egg.json",
+          "src/main/java/net/mcreator/test/client/renderer/HypnareMobRenderer.java",
+          "src/main/java/net/mcreator/test/entity/HypnareMobEntity.java"
+        ]
+      }
+    },
+    {
+      "name": "YokatMob",
+      "type": "livingentity",
+      "sortid": 180,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "yokat_mob",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/test/entity/YokatMobEntity.java",
+          "src/main/resources/assets/test/models/item/yokat_mob_spawn_egg.json",
+          "src/main/java/net/mcreator/test/client/renderer/YokatMobRenderer.java"
+        ]
+      }
+    },
+    {
+      "name": "OrbideMob",
+      "type": "livingentity",
+      "sortid": 181,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "orbide_mob",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/test/models/item/orbide_mob_spawn_egg.json",
+          "src/main/java/net/mcreator/test/client/renderer/OrbideMobRenderer.java",
+          "src/main/java/net/mcreator/test/entity/OrbideMobEntity.java"
+        ]
+      }
+    },
+    {
+      "name": "OrbideMobResting",
+      "type": "livingentity",
+      "sortid": 182,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "orbide_mob_resting",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/test/entity/OrbideMobRestingEntity.java",
+          "src/main/java/net/mcreator/test/client/renderer/OrbideMobRestingRenderer.java"
+        ]
+      }
+    },
+    {
+      "name": "TaroniMob",
+      "type": "livingentity",
+      "sortid": 183,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "taroni_mob",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/test/client/renderer/TaroniMobRenderer.java",
+          "src/main/resources/assets/test/models/item/taroni_mob_spawn_egg.json",
+          "src/main/java/net/mcreator/test/entity/TaroniMobEntity.java"
+        ]
+      }
+    },
+    {
+      "name": "HemogoblinMob",
+      "type": "livingentity",
+      "sortid": 184,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "hemogoblin_mob",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/test/models/item/hemogoblin_mob_spawn_egg.json",
+          "src/main/java/net/mcreator/test/entity/HemogoblinMobEntity.java",
+          "src/main/java/net/mcreator/test/client/renderer/HemogoblinMobRenderer.java"
+        ]
+      }
+    },
+    {
+      "name": "HemogoblinMobFront",
+      "type": "livingentity",
+      "sortid": 185,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "hemogoblin_mob_front",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/test/entity/HemogoblinMobFrontEntity.java",
+          "src/main/java/net/mcreator/test/client/renderer/HemogoblinMobFrontRenderer.java"
+        ]
+      }
+    },
+    {
+      "name": "HemogoblinMobRear",
+      "type": "livingentity",
+      "sortid": 186,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "hemogoblin_mob_rear",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/test/entity/HemogoblinMobRearEntity.java",
+          "src/main/java/net/mcreator/test/client/renderer/HemogoblinMobRearRenderer.java"
+        ]
+      }
+    },
+    {
+      "name": "ApexMutantMob",
+      "type": "livingentity",
+      "sortid": 187,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "apex_mutant_mob",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/test/entity/ApexMutantMobEntity.java",
+          "src/main/java/net/mcreator/test/client/renderer/ApexMutantMobRenderer.java",
+          "src/main/resources/assets/test/models/item/apex_mutant_mob_spawn_egg.json"
+        ]
+      }
+    },
+    {
+      "name": "GosmetMob",
+      "type": "livingentity",
+      "sortid": 188,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "gosmet_mob",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/test/entity/GosmetMobEntity.java",
+          "src/main/java/net/mcreator/test/client/renderer/GosmetMobRenderer.java",
+          "src/main/resources/assets/test/models/item/gosmet_mob_spawn_egg.json"
+        ]
+      }
+    },
+    {
+      "name": "IxolingMob",
+      "type": "livingentity",
+      "sortid": 189,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ixoling_mob",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/test/models/item/ixoling_mob_spawn_egg.json",
+          "src/main/java/net/mcreator/test/entity/IxolingMobEntity.java",
+          "src/main/java/net/mcreator/test/client/renderer/IxolingMobRenderer.java"
+        ]
+      }
+    },
+    {
+      "name": "KluexSentryMob",
+      "type": "livingentity",
+      "sortid": 190,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "kluex_sentry_mob",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/test/models/item/kluex_sentry_mob_spawn_egg.json",
+          "src/main/java/net/mcreator/test/client/renderer/KluexSentryMobRenderer.java",
+          "src/main/java/net/mcreator/test/entity/KluexSentryMobEntity.java"
+        ]
+      }
+    },
+    {
+      "name": "KluexTotemMob",
+      "type": "livingentity",
+      "sortid": 191,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "kluex_totem_mob",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/test/client/renderer/KluexTotemMobRenderer.java",
+          "src/main/java/net/mcreator/test/entity/KluexTotemMobEntity.java",
+          "src/main/resources/assets/test/models/item/kluex_totem_mob_spawn_egg.json"
+        ]
+      }
+    },
+    {
+      "name": "MiniDroneMob",
+      "type": "livingentity",
+      "sortid": 192,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mini_drone_mob",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/test/entity/MiniDroneMobEntity.java",
+          "src/main/java/net/mcreator/test/client/renderer/MiniDroneMobRenderer.java",
+          "src/main/resources/assets/test/models/item/mini_drone_mob_spawn_egg.json"
+        ]
+      }
+    },
+    {
+      "name": "MotherPoptopMob",
+      "type": "livingentity",
+      "sortid": 193,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mother_poptop_mob",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/test/client/renderer/MotherPoptopMobRenderer.java",
+          "src/main/java/net/mcreator/test/entity/MotherPoptopMobEntity.java",
+          "src/main/resources/assets/test/models/item/mother_poptop_mob_spawn_egg.json"
+        ]
+      }
+    },
+    {
+      "name": "MoontantMob",
+      "type": "livingentity",
+      "sortid": 194,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "moontant_mob",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/test/entity/MoontantMobEntity.java",
+          "src/main/resources/assets/test/models/item/moontant_mob_spawn_egg.json",
+          "src/main/java/net/mcreator/test/client/renderer/MoontantMobRenderer.java"
+        ]
+      }
+    },
+    {
+      "name": "PoMob",
+      "type": "livingentity",
+      "sortid": 195,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "po_mob",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/test/client/renderer/PoMobRenderer.java",
+          "src/main/resources/assets/test/models/item/po_mob_spawn_egg.json",
+          "src/main/java/net/mcreator/test/entity/PoMobEntity.java"
+        ]
+      }
+    },
+    {
+      "name": "PoletMob",
+      "type": "livingentity",
+      "sortid": 196,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "polet_mob",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/test/client/renderer/PoletMobRenderer.java",
+          "src/main/java/net/mcreator/test/entity/PoletMobEntity.java"
+        ]
+      }
+    },
+    {
+      "name": "PolingMob",
+      "type": "livingentity",
+      "sortid": 197,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "poling_mob",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/test/entity/PolingMobEntity.java",
+          "src/main/java/net/mcreator/test/client/renderer/PolingMobRenderer.java"
+        ]
+      }
+    },
+    {
+      "name": "PoGolemMob",
+      "type": "livingentity",
+      "sortid": 198,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "po_golem_mob",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/test/entity/PoGolemMobEntity.java",
+          "src/main/java/net/mcreator/test/client/renderer/PoGolemMobRenderer.java",
+          "src/main/resources/assets/test/models/item/po_golem_mob_spawn_egg.json"
+        ]
+      }
+    },
+    {
+      "name": "PunchyMob",
+      "type": "livingentity",
+      "sortid": 199,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "punchy_mob",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/test/client/renderer/PunchyMobRenderer.java",
+          "src/main/resources/assets/test/models/item/punchy_mob_spawn_egg.json",
+          "src/main/java/net/mcreator/test/entity/PunchyMobEntity.java"
+        ]
+      }
+    },
+    {
+      "name": "PunchyMobEntityIsHurt",
+      "type": "procedure",
+      "sortid": 200,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "punchy_mob_entity_is_hurt",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/test/procedures/PunchyMobEntityIsHurtProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "SwarpionMob",
+      "type": "livingentity",
+      "sortid": 201,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "swarpion_mob",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/test/client/renderer/SwarpionMobRenderer.java",
+          "src/main/resources/assets/test/models/item/swarpion_mob_spawn_egg.json",
+          "src/main/java/net/mcreator/test/entity/SwarpionMobEntity.java"
+        ]
+      }
+    },
+    {
+      "name": "TentacleBombMob",
+      "type": "livingentity",
+      "sortid": 202,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "tentacle_bomb_mob",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/test/client/renderer/TentacleBombMobRenderer.java",
+          "src/main/java/net/mcreator/test/entity/TentacleBombMobEntity.java",
+          "src/main/resources/assets/test/models/item/tentacle_bomb_mob_spawn_egg.json"
+        ]
+      }
+    },
+    {
+      "name": "TentacleClamMob",
+      "type": "livingentity",
+      "sortid": 203,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "tentacle_clam_mob",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/test/models/item/tentacle_clam_mob_spawn_egg.json",
+          "src/main/java/net/mcreator/test/client/renderer/TentacleClamMobRenderer.java",
+          "src/main/java/net/mcreator/test/entity/TentacleClamMobEntity.java"
+        ]
+      }
+    },
+    {
+      "name": "TentacleCrawlerMob",
+      "type": "livingentity",
+      "sortid": 204,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "tentacle_crawler_mob",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/test/entity/TentacleCrawlerMobEntity.java",
+          "src/main/java/net/mcreator/test/client/renderer/TentacleCrawlerMobRenderer.java",
+          "src/main/resources/assets/test/models/item/tentacle_crawler_mob_spawn_egg.json"
+        ]
+      }
+    },
+    {
+      "name": "TentacleGhostMob",
+      "type": "livingentity",
+      "sortid": 205,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "tentacle_ghost_mob",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/test/entity/TentacleGhostMobEntity.java",
+          "src/main/java/net/mcreator/test/client/renderer/TentacleGhostMobRenderer.java",
+          "src/main/resources/assets/test/models/item/tentacle_ghost_mob_spawn_egg.json"
+        ]
+      }
+    },
+    {
+      "name": "TentacleGnatMob",
+      "type": "livingentity",
+      "sortid": 206,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "tentacle_gnat_mob",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/test/client/renderer/TentacleGnatMobRenderer.java",
+          "src/main/resources/assets/test/models/item/tentacle_gnat_mob_spawn_egg.json",
+          "src/main/java/net/mcreator/test/entity/TentacleGnatMobEntity.java"
+        ]
+      }
+    },
+    {
+      "name": "TentacleSpawnerMob",
+      "type": "livingentity",
+      "sortid": 207,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "tentacle_spawner_mob",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/test/entity/TentacleSpawnerMobEntity.java",
+          "src/main/java/net/mcreator/test/client/renderer/TentacleSpawnerMobRenderer.java",
+          "src/main/resources/assets/test/models/item/tentacle_spawner_mob_spawn_egg.json"
+        ]
+      }
+    },
+    {
+      "name": "TriplodMob",
+      "type": "livingentity",
+      "sortid": 208,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "triplod_mob",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/test/models/item/triplod_mob_spawn_egg.json",
+          "src/main/java/net/mcreator/test/client/renderer/TriplodMobRenderer.java",
+          "src/main/java/net/mcreator/test/entity/TriplodMobEntity.java"
+        ]
+      }
+    },
+    {
+      "name": "ParaspriteMob",
+      "type": "livingentity",
+      "sortid": 209,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "parasprite_mob",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/test/client/renderer/ParaspriteMobRenderer.java",
+          "src/main/java/net/mcreator/test/entity/ParaspriteMobEntity.java",
+          "src/main/resources/assets/test/models/item/parasprite_mob_spawn_egg.json"
+        ]
+      }
+    },
+    {
+      "name": "CosmicIntruderMob",
+      "type": "livingentity",
+      "sortid": 210,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cosmic_intruder_mob",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/test/entity/CosmicIntruderMobEntity.java",
+          "src/main/java/net/mcreator/test/client/renderer/CosmicIntruderMobRenderer.java",
+          "src/main/resources/assets/test/models/item/cosmic_intruder_mob_spawn_egg.json"
+        ]
+      }
+    },
+    {
+      "name": "ChickenMob",
+      "type": "livingentity",
+      "sortid": 211,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "chicken_mob",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/test/client/renderer/ChickenMobRenderer.java",
+          "src/main/java/net/mcreator/test/entity/ChickenMobEntity.java",
+          "src/main/resources/assets/test/models/item/chicken_mob_spawn_egg.json"
+        ]
+      }
+    },
+    {
+      "name": "RobotChickenMob",
+      "type": "livingentity",
+      "sortid": 212,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "robot_chicken_mob",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/test/models/item/robot_chicken_mob_spawn_egg.json",
+          "src/main/java/net/mcreator/test/client/renderer/RobotChickenMobRenderer.java",
+          "src/main/java/net/mcreator/test/entity/RobotChickenMobEntity.java"
+        ]
+      }
+    },
+    {
+      "name": "MooshiMob",
+      "type": "livingentity",
+      "sortid": 213,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mooshi_mob",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/test/entity/MooshiMobEntity.java",
+          "src/main/java/net/mcreator/test/client/renderer/MooshiMobRenderer.java",
+          "src/main/resources/assets/test/models/item/mooshi_mob_spawn_egg.json"
+        ]
+      }
+    },
+    {
+      "name": "FluffaloMob",
+      "type": "livingentity",
+      "sortid": 214,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fluffalo_mob",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/test/entity/FluffaloMobEntity.java",
+          "src/main/java/net/mcreator/test/client/renderer/FluffaloMobRenderer.java",
+          "src/main/resources/assets/test/models/item/fluffalo_mob_spawn_egg.json"
+        ]
+      }
+    },
+    {
+      "name": "FluffaloFireMob",
+      "type": "livingentity",
+      "sortid": 215,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fluffalo_fire_mob",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/test/entity/FluffaloFireMobEntity.java",
+          "src/main/java/net/mcreator/test/client/renderer/FluffaloFireMobRenderer.java",
+          "src/main/resources/assets/test/models/item/fluffalo_fire_mob_spawn_egg.json"
+        ]
+      }
+    },
+    {
+      "name": "FluffaloPoisonMob",
+      "type": "livingentity",
+      "sortid": 216,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fluffalo_poison_mob",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/test/entity/FluffaloPoisonMobEntity.java",
+          "src/main/resources/assets/test/models/item/fluffalo_poison_mob_spawn_egg.json",
+          "src/main/java/net/mcreator/test/client/renderer/FluffaloPoisonMobRenderer.java"
+        ]
+      }
+    },
+    {
+      "name": "FluffaloIceMob",
+      "type": "livingentity",
+      "sortid": 217,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fluffalo_ice_mob",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/test/entity/FluffaloIceMobEntity.java",
+          "src/main/resources/assets/test/models/item/fluffalo_ice_mob_spawn_egg.json",
+          "src/main/java/net/mcreator/test/client/renderer/FluffaloIceMobRenderer.java"
+        ]
+      }
+    },
+    {
+      "name": "FluffaloElectricMob",
+      "type": "livingentity",
+      "sortid": 218,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fluffalo_electric_mob",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/test/entity/FluffaloElectricMobEntity.java",
+          "src/main/java/net/mcreator/test/client/renderer/FluffaloElectricMobRenderer.java",
+          "src/main/resources/assets/test/models/item/fluffalo_electric_mob_spawn_egg.json"
+        ]
+      }
+    },
+    {
+      "name": "AstrofaeMob",
+      "type": "livingentity",
+      "sortid": 219,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "astrofae_mob",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/test/entity/AstrofaeMobEntity.java",
+          "src/main/java/net/mcreator/test/client/renderer/AstrofaeMobRenderer.java",
+          "src/main/resources/assets/test/models/item/astrofae_mob_spawn_egg.json"
+        ]
+      }
+    },
+    {
+      "name": "ChiropterrorMob",
+      "type": "livingentity",
+      "sortid": 220,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "chiropterror_mob",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/test/client/renderer/ChiropterrorMobRenderer.java",
+          "src/main/resources/assets/test/models/item/chiropterror_mob_spawn_egg.json",
+          "src/main/java/net/mcreator/test/entity/ChiropterrorMobEntity.java"
+        ]
+      }
+    },
+    {
+      "name": "CosmostacheMob",
+      "type": "livingentity",
+      "sortid": 221,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cosmostache_mob",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/test/models/item/cosmostache_mob_spawn_egg.json",
+          "src/main/java/net/mcreator/test/client/renderer/CosmostacheMobRenderer.java",
+          "src/main/java/net/mcreator/test/entity/CosmostacheMobEntity.java"
+        ]
+      }
+    },
+    {
+      "name": "HeavyDroneMob",
+      "type": "livingentity",
+      "sortid": 222,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "heavy_drone_mob",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/test/entity/HeavyDroneMobEntity.java",
+          "src/main/java/net/mcreator/test/client/renderer/HeavyDroneMobRenderer.java",
+          "src/main/resources/assets/test/models/item/heavy_drone_mob_spawn_egg.json"
+        ]
+      }
+    },
+    {
+      "name": "MasteroidMob",
+      "type": "livingentity",
+      "sortid": 223,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "masteroid_mob",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/test/entity/MasteroidMobEntity.java",
+          "src/main/resources/assets/test/models/item/masteroid_mob_spawn_egg.json",
+          "src/main/java/net/mcreator/test/client/renderer/MasteroidMobRenderer.java"
+        ]
+      }
+    },
+    {
+      "name": "MasteroidMobL",
+      "type": "livingentity",
+      "sortid": 224,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "masteroid_mob_l",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/test/client/renderer/MasteroidMobLRenderer.java",
+          "src/main/java/net/mcreator/test/entity/MasteroidMobLEntity.java"
+        ]
+      }
+    },
+    {
+      "name": "MasteroidMobM",
+      "type": "livingentity",
+      "sortid": 225,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "masteroid_mob_m",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/test/client/renderer/MasteroidMobMRenderer.java",
+          "src/main/java/net/mcreator/test/entity/MasteroidMobMEntity.java"
+        ]
+      }
+    },
+    {
+      "name": "MasteroidMobS",
+      "type": "livingentity",
+      "sortid": 226,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "masteroid_mob_s",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/test/entity/MasteroidMobSEntity.java",
+          "src/main/java/net/mcreator/test/client/renderer/MasteroidMobSRenderer.java"
+        ]
+      }
+    },
+    {
+      "name": "OmnicannonMob",
+      "type": "livingentity",
+      "sortid": 227,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "omnicannon_mob",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/test/models/item/omnicannon_mob_spawn_egg.json",
+          "src/main/java/net/mcreator/test/client/renderer/OmnicannonMobRenderer.java",
+          "src/main/java/net/mcreator/test/entity/OmnicannonMobEntity.java"
+        ]
+      }
+    },
+    {
+      "name": "RustickMob",
+      "type": "livingentity",
+      "sortid": 228,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "rustick_mob",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/test/client/renderer/RustickMobRenderer.java",
+          "src/main/resources/assets/test/models/item/rustick_mob_spawn_egg.json",
+          "src/main/java/net/mcreator/test/entity/RustickMobEntity.java"
+        ]
+      }
+    },
+    {
+      "name": "SpinemineMob",
+      "type": "livingentity",
+      "sortid": 229,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "spinemine_mob",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/test/entity/SpinemineMobEntity.java",
+          "src/main/resources/assets/test/models/item/spinemine_mob_spawn_egg.json",
+          "src/main/java/net/mcreator/test/client/renderer/SpinemineMobRenderer.java"
+        ]
+      }
+    },
+    {
+      "name": "TrifangleMob",
+      "type": "livingentity",
+      "sortid": 230,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "trifangle_mob",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/test/models/item/trifangle_mob_spawn_egg.json",
+          "src/main/java/net/mcreator/test/entity/TrifangleMobEntity.java",
+          "src/main/java/net/mcreator/test/client/renderer/TrifangleMobRenderer.java"
+        ]
+      }
+    },
+    {
+      "name": "TwigunMob",
+      "type": "livingentity",
+      "sortid": 231,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "twigun_mob",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/test/models/item/twigun_mob_spawn_egg.json",
+          "src/main/java/net/mcreator/test/client/renderer/TwigunMobRenderer.java",
+          "src/main/java/net/mcreator/test/entity/TwigunMobEntity.java"
+        ]
+      }
+    },
+    {
+      "name": "NoSnowHighUpBiome",
+      "type": "biome",
+      "sortid": 232,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "no_snow_high_up_biome",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/test/world/biome/NoSnowHighUpBiomeBiome.java"
+        ]
+      }
+    },
+    {
+      "name": "WeatherTestDim",
+      "type": "dimension",
+      "sortid": 233,
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "weather_test_dim",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/test/world/dimension/WeatherTestDimDimension.java",
+          "src/main/resources/data/test/dimension/weather_test_dim.json",
+          "src/main/resources/data/test/dimension_type/weather_test_dim.json"
+        ]
+      }
+    },
+    {
+      "name": "CoreLavaUpdateTick",
+      "type": "procedure",
+      "sortid": 235,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "core_lava_update_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/test/procedures/CoreLavaUpdateTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "CoreLava",
+      "type": "fluid",
+      "sortid": 236,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "core_lava",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/test/fluid/CoreLavaFluid.java",
+          "src/main/java/net/mcreator/test/block/CoreLavaBlock.java",
+          "src/main/java/net/mcreator/test/fluid/types/CoreLavaFluidType.java",
+          "src/main/resources/assets/test/models/item/core_lava_bucket.json",
+          "src/main/resources/assets/test/models/block/core_lava.json",
+          "src/main/resources/assets/test/blockstates/core_lava.json"
+        ]
+      }
+    },
+    {
+      "name": "TestDim",
+      "type": "dimension",
+      "sortid": 239,
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "test_dim",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/test/world/dimension/TestDimDimension.java",
+          "src/main/resources/data/test/dimension_type/test_dim.json",
+          "src/main/resources/data/test/dimension/test_dim.json"
+        ]
+      }
+    },
+    {
+      "name": "PseudoGravity",
+      "type": "procedure",
+      "sortid": 240,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "pseudo_gravity",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/test/procedures/PseudoGravityProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "EnergyBarUIOverlayDisplayChunk1",
+      "type": "procedure",
+      "sortid": 250,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "energy_bar_ui_overlay_display_chunk_1",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/test/procedures/EnergyBarUIOverlayDisplayChunk1Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "EnergyBarUIOverlayDisplayChunk2",
+      "type": "procedure",
+      "sortid": 251,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "energy_bar_ui_overlay_display_chunk_2",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/test/procedures/EnergyBarUIOverlayDisplayChunk2Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "EnergyBarUIOverlayDisplayChunk3",
+      "type": "procedure",
+      "sortid": 252,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "energy_bar_ui_overlay_display_chunk_3",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/test/procedures/EnergyBarUIOverlayDisplayChunk3Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "EnergyBarUIOverlayDisplayChunk4",
+      "type": "procedure",
+      "sortid": 253,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "energy_bar_ui_overlay_display_chunk_4",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/test/procedures/EnergyBarUIOverlayDisplayChunk4Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "EnergyBarUIOverlayDisplayChunk5",
+      "type": "procedure",
+      "sortid": 254,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "energy_bar_ui_overlay_display_chunk_5",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/test/procedures/EnergyBarUIOverlayDisplayChunk5Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "EnergyBarUIOverlayDisplayChunk6",
+      "type": "procedure",
+      "sortid": 255,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "energy_bar_ui_overlay_display_chunk_6",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/test/procedures/EnergyBarUIOverlayDisplayChunk6Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "EnergyBarUIOverlayDisplayChunk7",
+      "type": "procedure",
+      "sortid": 256,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "energy_bar_ui_overlay_display_chunk_7",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/test/procedures/EnergyBarUIOverlayDisplayChunk7Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "EnergyBarUIOverlayDisplayChunk8",
+      "type": "procedure",
+      "sortid": 257,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "energy_bar_ui_overlay_display_chunk_8",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/test/procedures/EnergyBarUIOverlayDisplayChunk8Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "EnergyBarUIOverlayDisplayChunk9",
+      "type": "procedure",
+      "sortid": 258,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "energy_bar_ui_overlay_display_chunk_9",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/test/procedures/EnergyBarUIOverlayDisplayChunk9Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "EnergyBarUIOverlayDisplayChunk10",
+      "type": "procedure",
+      "sortid": 259,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "energy_bar_ui_overlay_display_chunk_10",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/test/procedures/EnergyBarUIOverlayDisplayChunk10Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "EnergyRestoreOverTime",
+      "type": "procedure",
+      "sortid": 260,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "energy_restore_over_time",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/test/procedures/EnergyRestoreOverTimeProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "PlayerJoinsWorld",
+      "type": "procedure",
+      "sortid": 261,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "player_joins_world",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/test/procedures/PlayerJoinsWorldProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "RacerMob1",
+      "type": "livingentity",
+      "sortid": 264,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "racer_mob_1",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/test/entity/RacerMob1Entity.java",
+          "src/main/resources/assets/test/models/item/racer_mob_1_spawn_egg.json",
+          "src/main/java/net/mcreator/test/client/renderer/RacerMob1Renderer.java"
+        ]
+      }
+    },
+    {
+      "name": "RacerMob2",
+      "type": "livingentity",
+      "sortid": 265,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "racer_mob_2",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/test/client/renderer/RacerMob2Renderer.java",
+          "src/main/resources/assets/test/models/item/racer_mob_2_spawn_egg.json",
+          "src/main/java/net/mcreator/test/entity/RacerMob2Entity.java"
+        ]
+      }
+    },
+    {
+      "name": "RacerMob3",
+      "type": "livingentity",
+      "sortid": 266,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "racer_mob_3",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/test/entity/RacerMob3Entity.java",
+          "src/main/resources/assets/test/models/item/racer_mob_3_spawn_egg.json",
+          "src/main/java/net/mcreator/test/client/renderer/RacerMob3Renderer.java"
+        ]
+      }
+    },
+    {
+      "name": "RacerMob4",
+      "type": "livingentity",
+      "sortid": 267,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "racer_mob_4",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/test/entity/RacerMob4Entity.java",
+          "src/main/resources/assets/test/models/item/racer_mob_4_spawn_egg.json",
+          "src/main/java/net/mcreator/test/client/renderer/RacerMob4Renderer.java"
+        ]
+      }
+    },
+    {
+      "name": "RacerMob5",
+      "type": "livingentity",
+      "sortid": 268,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "racer_mob_5",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/test/client/renderer/RacerMob5Renderer.java",
+          "src/main/resources/assets/test/models/item/racer_mob_5_spawn_egg.json",
+          "src/main/java/net/mcreator/test/entity/RacerMob5Entity.java"
+        ]
+      }
+    },
+    {
+      "name": "RacerMob6",
+      "type": "livingentity",
+      "sortid": 269,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "racer_mob_6",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/test/entity/RacerMob6Entity.java",
+          "src/main/java/net/mcreator/test/client/renderer/RacerMob6Renderer.java",
+          "src/main/resources/assets/test/models/item/racer_mob_6_spawn_egg.json"
+        ]
+      }
+    },
+    {
+      "name": "EnergyBarUIOverlayNew",
+      "type": "overlay",
+      "sortid": 270,
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "energy_bar_ui_overlay_new",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/test/client/screens/EnergyBarUIOverlayNewOverlay.java"
+        ]
+      }
+    },
+    {
+      "name": "EnergyBarUIOverlayDisplayChunk11",
+      "type": "procedure",
+      "sortid": 271,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "energy_bar_ui_overlay_display_chunk_11",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/test/procedures/EnergyBarUIOverlayDisplayChunk11Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "EnergyBarUIOverlayDisplayChunk12",
+      "type": "procedure",
+      "sortid": 272,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "energy_bar_ui_overlay_display_chunk_12",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/test/procedures/EnergyBarUIOverlayDisplayChunk12Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "EnergyBarUIOverlayDisplayChunk13",
+      "type": "procedure",
+      "sortid": 273,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "energy_bar_ui_overlay_display_chunk_13",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/test/procedures/EnergyBarUIOverlayDisplayChunk13Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "EnergyBarUIOverlayDisplayChunk14",
+      "type": "procedure",
+      "sortid": 274,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "energy_bar_ui_overlay_display_chunk_14",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/test/procedures/EnergyBarUIOverlayDisplayChunk14Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "EnergyBarUIOverlayDisplayChunk15",
+      "type": "procedure",
+      "sortid": 275,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "energy_bar_ui_overlay_display_chunk_15",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/test/procedures/EnergyBarUIOverlayDisplayChunk15Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "EnergyBarUIOverlayDisplayChunk16",
+      "type": "procedure",
+      "sortid": 276,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "energy_bar_ui_overlay_display_chunk_16",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/test/procedures/EnergyBarUIOverlayDisplayChunk16Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "EnergyBarUIOverlayDisplayChunk17",
+      "type": "procedure",
+      "sortid": 277,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "energy_bar_ui_overlay_display_chunk_17",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/test/procedures/EnergyBarUIOverlayDisplayChunk17Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "EnergyBarUIOverlayDisplayChunk18",
+      "type": "procedure",
+      "sortid": 278,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "energy_bar_ui_overlay_display_chunk_18",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/test/procedures/EnergyBarUIOverlayDisplayChunk18Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "EnergyBarUIOverlayDisplayChunk19",
+      "type": "procedure",
+      "sortid": 279,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "energy_bar_ui_overlay_display_chunk_19",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/test/procedures/EnergyBarUIOverlayDisplayChunk19Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "EnergyBarUIOverlayDisplayChunk20",
+      "type": "procedure",
+      "sortid": 280,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "energy_bar_ui_overlay_display_chunk_20",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/test/procedures/EnergyBarUIOverlayDisplayChunk20Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "AllowIfInSurvivalOrAdventureMode",
+      "type": "procedure",
+      "sortid": 281,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "allow_if_in_survival_or_adventure_mode",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/test/procedures/AllowIfInSurvivalOrAdventureModeProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "GleapMobOnEntityTickUpdate",
+      "type": "procedure",
+      "sortid": 282,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "gleap_mob_on_entity_tick_update",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/test/procedures/GleapMobOnEntityTickUpdateProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    }
+  ],
+  "variable_elements": [
+    {
+      "name": "PLAYER_PIXEL_CURRENCY",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "PLAYER_MAX_ENERGY",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0.0"
+    },
+    {
+      "name": "PLAYER_CURRENT_ENERGY",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0.0"
+    }
+  ],
+  "sound_elements": [],
+  "language_map": {
+    "en_us": {
+      "entity.test.bobot_mob_charging": "Bobot",
+      "item.test.test_weapon_dagger": "Test Weapon Dagger",
+      "entity.test.mooshi_mob": "Mooshi",
+      "gui.test.mm_upgrade_gui_test.button_empty": "Liquid Upgrade",
+      "item.test.po_mob_spawn_egg": "Po Spawn Egg",
+      "entity.test.tentacle_clam_mob": "Tentacle Clam",
+      "entity.test.mech_test_body": "Mech Test Body",
+      "block.test.texture": "Texture",
+      "entity.test.paratail_mob": "Paratail",
+      "item.test.adult_poptop_mob_spawn_egg": "Adult Poptop Spawn Egg",
+      "item.test.orbide_mob_spawn_egg": "Orbide Spawn Egg",
+      "item.test.fluffalo_electric_mob_spawn_egg": "Electric Fluffalo Spawn Egg",
+      "entity.test.mech_test_leg_right": "Mech Test Leg Right",
+      "item.test.snaunt_mob_spawn_egg": "Snaunt Spawn Egg",
+      "item.test.kluex_totem_mob_spawn_egg": "Kluex Totem Spawn Egg",
+      "item.test.test_weapon_axe": "Test Weapon Axe",
+      "item.test.mech_test_body_spawn_egg": "Mech Test Body Spawn Egg",
+      "item.test.block_indicator_entity_2_spawn_egg": "Wire Indicator Entity Spawn Egg",
+      "item.test.chiropterror_mob_spawn_egg": "Chiropterror Spawn Egg",
+      "item.test.mech_test_arm_left_spawn_egg": "Mech Test Arm Left Spawn Egg",
+      "item.test.fluffalo_fire_mob_spawn_egg": "Fire Fluffalo Spawn Egg",
+      "entity.test.adult_poptop_mob": "Adult Poptop",
+      "entity.test.mech_test_arm_left": "Mech Test Arm Left",
+      "item.test.tentacle_ghost_mob_spawn_egg": "Tentacle Ghost Spawn Egg",
+      "item.test.masteroid_mob_s_spawn_egg": "Masteroid Spawn Egg",
+      "entity.test.omnicannon_mob": "Omnicannon",
+      "entity.test.po_mob": "Po",
+      "entity.test.mini_drone_mob": "Mini Drone",
+      "item.test.scandroid_mob_spawn_egg": "Scandroid Spawn Egg",
+      "entity.test.cosmostache_mob": "Cosmostache",
+      "entity.test.lilodon_mob": "Lilodon",
+      "entity.test.yokat_mob": "Yokat",
+      "item.test.block_indicator_entity_1_spawn_egg": "Block Indicator Entity Spawn Egg",
+      "item.test.pyromantle_mob_spawn_egg": "Pyromantle Spawn Egg",
+      "item.test.spookit_mob_spawn_egg": "Spookit Spawn Egg",
+      "item.test.poling_mob_spawn_egg": "Po Spawn Egg",
+      "item.test.gosmet_mob_spawn_egg": "Gosmet Spawn Egg",
+      "entity.test.mother_poptop_mob": "Mother Poptop",
+      "entity.test.miasmop_mob": "Miasmob",
+      "item.test.core_lava_bucket": "Core Lava Bucket",
+      "entity.test.moontant_mob": "Moontant",
+      "entity.test.kluex_sentry_mob": "Kluex Sentry",
+      "entity.test.lumoth_mob": "Lumoth",
+      "item.test.lilodon_mob_spawn_egg": "Lilodon Spawn Egg",
+      "entity.test.pyromantle_mob": "Pyromantle",
+      "entity.test.gleap_mob": "Gleap",
+      "block.test.poison": "Poison",
+      "entity.test.robot_chicken_mob": "Robot Chicken",
+      "key.test.mech_jump": "Mech Jump",
+      "item.test.mech_test_leg_left_spawn_egg": "Mech Test Leg Left Spawn Egg",
+      "item.test.orbide_mob_resting_spawn_egg": "Orbide Spawn Egg",
+      "entity.test.block_indicator_entity_1": "Block Indicator Entity",
+      "entity.test.block_indicator_entity_2": "Wire Indicator Entity",
+      "entity.test.block_indicator_entity_3": "Block Indicator Entity",
+      "entity.test.iguarmor_mob": "Iguarmor",
+      "entity.test.toumingo_mob": "Toumingo",
+      "item.test.snuffish_mob_spawn_egg": "Snuffish Spawn Egg",
+      "item.test.ixoling_mob_spawn_egg": "Ixoling Spawn Egg",
+      "entity.test.astrofae_mob": "Astrofae",
+      "item.test.peblit_mob_resting_spawn_egg": "Peblit Spawn Egg",
+      "block.test.test_pressure_plate": "Test Pressure Plate",
+      "entity.test.poptop_mob": "Poptop",
+      "entity.test.smoglin_mob": "Smoglin",
+      "item.test.narfin_mob_spawn_egg": "Narfin Spawn Egg",
+      "entity.test.parasprite_mob": "Parasprite",
+      "entity.test.petricub_mob": "Petricub",
+      "item.test.ringram_mob_spawn_egg": "Ringram Spawn Egg",
+      "entity.test.pipkin_mob": "Pipkin",
+      "item.test.toumingo_mob_spawn_egg": "Toumingo Spawn Egg",
+      "item.test.king_nutmidgeling_mob_spawn_egg": "King Nutmidgeling Spawn Egg",
+      "item.test.tentacle_bomb_mob_spawn_egg": "Tentacle Bomb Spawn Egg",
+      "fluid.test.poison": "Poison",
+      "item.test.skimbus_mob_spawn_egg": "Skimbus Spawn Egg",
+      "item.test.hemogoblin_mob_spawn_egg": "Hemogoblin Spawn Egg",
+      "item.test.fluffalo_poison_mob_spawn_egg": "Poison Fluffalo Spawn Egg",
+      "effect.test.poisoned": "Poisoned",
+      "item.test.sporgus_mob_spawn_egg": "Sporgus Spawn Egg",
+      "item.test.tentacle_crawler_mob_spawn_egg": "Tentacle Crawler Spawn Egg",
+      "entity.test.king_nutmidgeling_mob": "King Nutmidgeling",
+      "entity.test.squeem_mob": "Squeem",
+      "entity.test.tentacle_crawler_mob": "Tentacle Crawler",
+      "entity.test.masteroid_mob": "Masteroid",
+      "block.test.test_light_on": "Test Light (On)",
+      "entity.test.oculob_mob": "Oculob",
+      "entity.test.crabcano_mob": "Crabcano",
+      "item.test.racer_mob_5_spawn_egg": "Racer Mob Spawn Egg",
+      "item.test.debug_test_tool": "Debug Test Tool",
+      "entity.test.crustoise_mob_charging": "Crustoise",
+      "item.test.mech_test_leg_right_spawn_egg": "Mech Test Leg Right Spawn Egg",
+      "item.test.petropod_mob_spawn_egg": "Pteropod Spawn Egg",
+      "block.test.test_light_block": "Test Light Block",
+      "item.test.mother_poptop_mob_spawn_egg": "Mother Poptop Spawn Egg",
+      "item.test.monopus_mob_spawn_egg": "Monopus Spawn Egg",
+      "entity.test.rustick_mob": "Rustick",
+      "item.test.taroni_mob_spawn_egg": "Taroni Spawn Egg",
+      "item.test.squeem_mob_spawn_egg": "Squeem Spawn Egg",
+      "item.test.cosmic_intruder_mob_spawn_egg": "Cosmic Intruder Spawn Egg",
+      "item.test.bobot_mob_charging_spawn_egg": "Bobot Spawn Egg",
+      "entity.test.bobot_mob": "Bobot",
+      "entity.test.heavy_drone_mob": "Heavy Drone",
+      "item.test.poptop_mob_spawn_egg": "Poptop Spawn Egg",
+      "item.test.nutmidge_mob_charging_spawn_egg": "Nutmidge Spawn Egg",
+      "item.test.smoglin_mob_spawn_egg": "Smoglin Spawn Egg",
+      "entity.test.tentacle_spawner_mob": "Tentacle Spawner",
+      "entity.test.masteroid_mob_s": "Masteroid",
+      "entity.test.batong_mob_resting": "Batong",
+      "item.test.trictus_mob_spawn_egg": "Trictus Spawn Egg",
+      "entity.test.masteroid_mob_l": "Masteroid",
+      "item.test.quagmutt_mob_spawn_egg": "Quagmutt Spawn Egg",
+      "item.test.mech_test_arm_right_spawn_egg": "Mech Test Arm Right Spawn Egg",
+      "biome.test.noise_1": "Noise 1",
+      "entity.test.polet_mob": "Po",
+      "entity.test.masteroid_mob_m": "Masteroid",
+      "item.test.racer_mob_6_spawn_egg": "Racer Mob Spawn Egg",
+      "entity.test.sporgus_mob": "Sporgus",
+      "entity.test.scaveran_mob": "Scaveran",
+      "entity.test.racer_mob_6": "Racer Mob",
+      "item.test.oculob_mob_spawn_egg": "Oculob Spawn Egg",
+      "biome.test.oceantrent": "Oceantrent",
+      "entity.test.racer_mob_1": "Racer Mob",
+      "entity.test.racer_mob_5": "Racer Mob",
+      "entity.test.racer_mob_4": "Racer Mob",
+      "entity.test.racer_mob_3": "Racer Mob",
+      "entity.test.racer_mob_2": "Racer Mob",
+      "item.test.scandroid_mob_charging_spawn_egg": "Scandroid Spawn Egg",
+      "entity.test.anglure_mob": "Anglure",
+      "entity.test.spookit_mob": "Spookit",
+      "item.test.agrobat_mob_spawn_egg": "Agrobat Spawn Egg",
+      "entity.test.fluffalo_fire_mob": "Fire Fluffalo",
+      "entity.test.petropod_mob": "Pteropod",
+      "entity.test.batong_mob": "Batong",
+      "item.test.ignome_mob_spawn_egg": "Ignome Spawn Egg",
+      "item.test.bulbop_mob_spawn_egg": "Bulbop Spawn Egg",
+      "item.test.hemogoblin_mob_front_spawn_egg": "Hemo- Spawn Egg",
+      "item.test.swarpion_mob_spawn_egg": "Swarpion Spawn Egg",
+      "item.test.scaveran_mob_spawn_egg": "Scaveran Spawn Egg",
+      "entity.test.snuffish_mob": "Snuffish",
+      "item.test.mooshi_mob_spawn_egg": "Mooshi Spawn Egg",
+      "item.test.masteroid_mob_spawn_egg": "Masteroid Spawn Egg",
+      "block.test.test_button": "Test Button",
+      "item.test.higher": "Higher Portal Igniter",
+      "item.test.block_indicator_entity_3_spawn_egg": "Block Indicator Entity Spawn Egg",
+      "item.test.mattermanipulatorbeta": "Matter manipulator beta",
+      "item.test.test_weapon_shortsword": "Test Weapon Shortsword",
+      "item.test.tentacle_gnat_mob_spawn_egg": "Tentacle Gnat Spawn Egg",
+      "death.attack.poison": "Was poisoned",
+      "entity.test.oogler_mob": "Oogler",
+      "entity.test.tintic_mob": "Tintic",
+      "entity.test.apex_mutant_mob": "Apex Mutant",
+      "block.test.test_redstone_on": "Test Redstone (On)",
+      "item.test.agrobat_mob_resting_spawn_egg": "Agrobat Spawn Egg",
+      "item.test.racer_mob_2_spawn_egg": "Racer Mob Spawn Egg",
+      "entity.test.peblit_mob_resting": "Peblit",
+      "item.test.peblit_mob_spawn_egg": "Peblit Spawn Egg",
+      "item.test.anglure_mob_spawn_egg": "Anglure Spawn Egg",
+      "entity.test.orbide_mob_resting": "Orbide",
+      "item.test.masteroid_mob_m_spawn_egg": "Masteroid Spawn Egg",
+      "entity.test.narfin_mob": "Narfin",
+      "entity.test.nutmidgeling_mob": "Nutmidgeling",
+      "item.test.polet_mob_spawn_egg": "Po Spawn Egg",
+      "item.test.fluffalo_mob_spawn_egg": "Fluffalo Spawn Egg",
+      "key.test.mm_upgrade_gui_toggle_keybind": "Open MM Upgrade GUI",
+      "item.test.nutmidge_mob_spawn_egg": "Nutmidge Spawn Egg",
+      "item.test.moontant_mob_spawn_egg": "Moontant Spawn Egg",
+      "entity.test.spinemine_mob": "Spinemine",
+      "item.test.erchius_ghost_mob_spawn_egg": "Erchius Ghost Spawn Egg",
+      "entity.test.quagmutt_mob": "Quagmutt",
+      "entity.test.tentacle_bomb_mob": "Tentacle Bomb",
+      "item.test.voltip_mob_spawn_egg": "Voltip Spawn Egg",
+      "item.test.crabcano_mob_spawn_egg": "Crabcano Spawn Egg",
+      "entity.test.erchius_ghost_mob": "Erchius Ghost",
+      "item.test.heavy_drone_mob_spawn_egg": "Heavy Drone Spawn Egg",
+      "item.test.paratail_mob_spawn_egg": "Paratail Spawn Egg",
+      "entity.test.hemogoblin_mob": "Hemogoblin",
+      "entity.test.hemogoblin_mob_rear": "-goblin",
+      "item.test.racer_mob_3_spawn_egg": "Racer Mob Spawn Egg",
+      "item.test.mandraflora_mob_spawn_egg": "Mandraflora Spawn Egg",
+      "entity.test.mech_test_arm_right": "Mech Test Arm Right",
+      "item.test.test_monster_stat_item": "Test Monster Stat Item",
+      "item.test.lumoth_mob_spawn_egg": "Lumoth Spawn Egg",
+      "item.test.crustoise_mob_charging_spawn_egg": "Crustoise Spawn Egg",
+      "item.test.petricub_mob_spawn_egg": "Petricub Spawn Egg",
+      "item.test.bobfae_mob_spawn_egg": "Bobfae Spawn Egg",
+      "entity.test.trifangle_mob": "Trifangle",
+      "entity.test.fluffalo_mob": "Fluffalo",
+      "biome.test.ocean": "Ocean",
+      "item.test.tintic_mob_spawn_egg": "Tintic Spawn Egg",
+      "item.test.masteroid_mob_l_spawn_egg": "Masteroid Spawn Egg",
+      "item.test.hemogoblin_mob_rear_spawn_egg": "-goblin Spawn Egg",
+      "item.test.tentacle_spawner_mob_spawn_egg": "Tentacle Spawner Spawn Egg",
+      "entity.test.wisper_mob": "Wisper",
+      "gui.test.mm_upgrade_gui_test.button_empty7": "Speed Upgrade 2",
+      "item.test.batong_mob_resting_spawn_egg": "Batong Spawn Egg",
+      "gui.test.mm_upgrade_gui_test.button_empty8": "Speed Upgrade 3",
+      "gui.test.mm_upgrade_gui_test.button_empty9": "Range Upgrade 1",
+      "item.test.racer_mob_4_spawn_egg": "Racer Mob Spawn Egg",
+      "effect.test.shield_generator_effect": "Shield Generator",
+      "entity.test.capricoat_mob": "Capricoat",
+      "entity.test.nutmidge_mob_charging": "Nutmidge",
+      "entity.test.hemogoblin_mob_front": "Hemo-",
+      "gui.test.mm_upgrade_gui_test.button_empty1": "Paint Upgrade",
+      "gui.test.mm_upgrade_gui_test.button_empty2": "Wiring Upgrade",
+      "gui.test.mm_upgrade_gui_test.button_empty3": "Area Upgrade 1",
+      "gui.test.mm_upgrade_gui_test.button_empty4": "Area Upgrade 2",
+      "item.test.rustick_mob_spawn_egg": "Rustick Spawn Egg",
+      "biome.test.plains_1": "Plains 1",
+      "gui.test.mm_upgrade_gui_test.button_empty5": "Area Upgrade 3",
+      "gui.test.mm_upgrade_gui_test.button_empty6": "Speed Upgrade 1",
+      "entity.test.bulbop_mob": "Bulbop",
+      "item.test.chicken_mob_spawn_egg": "Chicken Spawn Egg",
+      "entity.test.ringram_mob": "Ringram",
+      "biome.test.no_snow_high_up_biome": "No Snow High Up Biome",
+      "item.test.snaggler_mob_spawn_egg": "Snaggler Spawn Egg",
+      "entity.test.tentacle_ghost_mob": "Tentacle Ghost",
+      "item.test.crutter_mob_spawn_egg": "Crutter Spawn Egg",
+      "entity.test.tentacle_gnat_mob": "Tentacle Gnat",
+      "entity.test.bobfae_mob": "Bobfae",
+      "entity.test.agrobat_mob": "Agrobat",
+      "item.test.kluex_sentry_mob_spawn_egg": "Kluex Sentry Spawn Egg",
+      "item.test.robot_chicken_mob_spawn_egg": "Robot Chicken Spawn Egg",
+      "item.test.fluffalo_ice_mob_spawn_egg": "Ice Fluffalo Spawn Egg",
+      "item.test.iguarmor_mob_spawn_egg": "Iguarmor Spawn Egg",
+      "entity.test.ignome_mob": "Ignome",
+      "entity.test.mech_test_leg_left": "Mech Test Leg Left",
+      "item.test.yokat_mob_spawn_egg": "Yokat Spawn Egg",
+      "item.test.gleap_mob_spawn_egg": "Gleap Spawn Egg",
+      "item.test.testnoise": "Testnoise Portal Igniter",
+      "entity.test.poling_mob": "Po",
+      "entity.test.pulpin_mob": "Pulpin",
+      "item.test.pulpin_mob_spawn_egg": "Pulpin Spawn Egg",
+      "item.test.twigun_mob_spawn_egg": "Twigun Spawn Egg",
+      "entity.test.trictus_mob": "Trictus",
+      "item.test.hypnare_mob_spawn_egg": "Hypnare Spawn Egg",
+      "entity.test.ixoling_mob": "Ixoling",
+      "entity.test.monopus_mob": "Monopus",
+      "item.test.racer_mob_1_spawn_egg": "Racer Mob Spawn Egg",
+      "item.test.oogler_mob_spawn_egg": "Oogler Spawn Egg",
+      "entity.test.kluex_totem_mob": "Kluex Totem",
+      "entity.test.agrobat_mob_resting": "Agrobat",
+      "entity.test.snaunt_mob": "Snaunt",
+      "item.test.parasprite_mob_spawn_egg": "Parasprite Spawn Egg",
+      "entity.test.swarpion_mob": "Swarpion",
+      "entity.test.snaggler_mob": "Snaggler",
+      "biome.test.ocean_1": "Ocean 1",
+      "item.test.weather_test_dim": "Weather Test Dim Portal Igniter",
+      "item.test.spinemine_mob_spawn_egg": "Spinemine Spawn Egg",
+      "item.test.test_dim": "Test Dim Portal Igniter",
+      "item.test.cosmostache_mob_spawn_egg": "Cosmostache Spawn Egg",
+      "entity.test.nutmidge_mob": "Nutmidge",
+      "item.test.trictus_mob_resting_spawn_egg": "Trictus Spawn Egg",
+      "entity.test.taroni_mob": "Taroni",
+      "entity.test.triplod_mob": "Triplod",
+      "item.test.monopus_mob_charging_spawn_egg": "Monopus Spawn Egg",
+      "item.test.tentacle_clam_mob_spawn_egg": "Tentacle Clam Spawn Egg",
+      "fluid.test.core_lava": "Core Lava",
+      "item.test.fennix_mob_spawn_egg": "Fennix Spawn Egg",
+      "item.test.nutmidgeling_mob_spawn_egg": "Nutmidgeling Spawn Egg",
+      "entity.test.fluffalo_poison_mob": "Poison Fluffalo",
+      "item.test.pipkin_mob_spawn_egg": "Pipkin Spawn Egg",
+      "item.test.mini_drone_mob_spawn_egg": "Mini Drone Spawn Egg",
+      "entity.test.peblit_mob": "Peblit",
+      "item.test.biomes_4": "blabla",
+      "entity.test.crutter_mob": "Crutter",
+      "entity.test.chiropterror_mob": "Chiropterror",
+      "item.test.batong_mob_spawn_egg": "Batong Spawn Egg",
+      "entity.test.monopus_mob_charging": "Monopus",
+      "entity.test.punchy_mob": "Punchy",
+      "entity.test.skimbus_mob": "Skimbus",
+      "item.test.capricoat_mob_spawn_egg": "Capricoat Spawn Egg",
+      "biome.test.noise": "Noise mountain",
+      "entity.test.scandroid_mob": "Scandroid",
+      "item.test.apex_mutant_mob_spawn_egg": "Apex Mutant Spawn Egg",
+      "item.test.astrofae_mob_spawn_egg": "Astrofae Spawn Egg",
+      "entity.test.cosmic_intruder_mob": "Cosmic Intruder",
+      "block.test.core_lava": "Core Lava",
+      "entity.test.fluffalo_electric_mob": "Electric Fluffalo",
+      "item.test.crustoise_mob_spawn_egg": "Crustoise Spawn Egg",
+      "entity.test.mandraflora_mob": "Mandraflora",
+      "item.test.trifangle_mob_spawn_egg": "Trifangle Spawn Egg",
+      "item.test.miasmop_mob_spawn_egg": "Miasmob Spawn Egg",
+      "block.test.test_redstone_off": "Test Redstone (Off)",
+      "entity.test.po_golem_mob": "Po Golem",
+      "entity.test.fennix_mob": "Fennix",
+      "entity.test.trictus_mob_resting": "Trictus",
+      "gui.test.mm_upgrade_gui_test.button_empty11": "Range Upgrade 3",
+      "gui.test.mm_upgrade_gui_test.button_empty10": "Range Upgrade 2",
+      "key.test.mm_change_mode_keybind": "MM Change Mode",
+      "item.test.omnicannon_mob_spawn_egg": "Omnicannon Spawn Egg",
+      "block.test.test_light_off": "Test Light (Off)",
+      "entity.test.fluffalo_ice_mob": "Ice Fluffalo",
+      "item.test.punchy_mob_spawn_egg": "Punchy Spawn Egg",
+      "item.test.triplod_mob_spawn_egg": "Triplod Spawn Egg",
+      "entity.test.twigun_mob": "Twigun",
+      "item.test.bobot_mob_spawn_egg": "Bobot Spawn Egg",
+      "entity.test.chicken_mob": "Chicken",
+      "entity.test.voltip_mob": "Voltip",
+      "item.test.poison_bucket": "Measure of Poison",
+      "entity.test.crustoise_mob": "Crustoise",
+      "entity.test.hypnare_mob": "Hypnare",
+      "item.test.wisper_mob_spawn_egg": "Wisper Spawn Egg",
+      "entity.test.scandroid_mob_charging": "Scandroid",
+      "item.test.po_golem_mob_spawn_egg": "Po Golem Spawn Egg",
+      "entity.test.orbide_mob": "Orbide",
+      "entity.test.gosmet_mob": "Gosmet",
+      "block.test.test_door": "Test Door"
+    }
+  },
+  "foldersRoot": {
+    "name": "~",
+    "children": []
+  },
+  "workspaceSettings": {
+    "modid": "test",
+    "modName": "test",
+    "version": "1.0.0",
+    "author": "Usuario, MCreator",
+    "websiteURL": "https://mcreator.net",
+    "license": "Academic Free License v3.0",
+    "disableForgeVersionCheck": true,
+    "serverSideOnly": false,
+    "requiredMods": [],
+    "dependencies": [],
+    "dependants": [],
+    "mcreatorDependencies": [],
+    "currentGenerator": "forge-1.19.2",
+    "modElementsPackage": "net.mcreator.test",
+    "lockBaseModFiles": false
+  },
+  "mcreatorVersion": 202300110610
+}

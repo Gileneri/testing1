@@ -211,7 +211,7 @@ public class MMWiringProcedureProcedure {
 							xPos = x;
 							yPos = y;
 							zPos = z;
-							itemstack.getOrCreateTag().putDouble("MMwireBlockFace", (whichBlockFace + 3));
+							itemstack.getOrCreateTag().putDouble("MMwireBlockFace", whichBlockFace);
 						}
 						if (!world.isClientSide()) {
 							BlockPos _bp = new BlockPos(itemstack.getOrCreateTag().getDouble(("MMwireXout" + itemstack.getOrCreateTag().getDouble("MMwireCarryingOutput"))),

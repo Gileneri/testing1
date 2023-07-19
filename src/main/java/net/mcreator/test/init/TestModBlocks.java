@@ -22,6 +22,7 @@ import net.mcreator.test.block.TestDoorBlock;
 import net.mcreator.test.block.TestButtonBlock;
 import net.mcreator.test.block.PoisonBlock;
 import net.mcreator.test.block.HigherPortalBlock;
+import net.mcreator.test.block.CoreLavaBlock;
 import net.mcreator.test.block.Biomes4PortalBlock;
 import net.mcreator.test.TestMod;
 
@@ -40,4 +41,5 @@ public class TestModBlocks {
 	public static final RegistryObject<Block> TEST_LIGHT_ON = REGISTRY.register("test_light_on", () -> new TestLightOnBlock());
 	public static final RegistryObject<Block> TEST_REDSTONE_OFF = REGISTRY.register("test_redstone_off", () -> new TestRedstoneOffBlock());
 	public static final RegistryObject<Block> TEST_REDSTONE_ON = REGISTRY.register("test_redstone_on", () -> new TestRedstoneOnBlock());
+	public static final RegistryObject<Block> CORE_LAVA = REGISTRY.register("core_lava", () -> new CoreLavaBlock());
 }
