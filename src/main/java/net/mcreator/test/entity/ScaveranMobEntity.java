@@ -12,7 +12,6 @@ import net.minecraft.world.entity.monster.Monster;
 import net.minecraft.world.entity.ai.goal.target.NearestAttackableTargetGoal;
 import net.minecraft.world.entity.ai.goal.target.HurtByTargetGoal;
 import net.minecraft.world.entity.ai.goal.RandomStrollGoal;
-import net.minecraft.world.entity.ai.goal.RandomLookAroundGoal;
 import net.minecraft.world.entity.ai.goal.MeleeAttackGoal;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
@@ -31,6 +30,7 @@ import net.minecraft.network.protocol.Packet;
 import net.minecraft.nbt.CompoundTag;
 
 import net.mcreator.test.procedures.MobOnInitialEntitySpawnStatScalingProcedure;
+import net.mcreator.test.procedures.GleapMobOnEntityTickUpdateProcedure;
 import net.mcreator.test.init.TestModEntities;
 
 import javax.annotation.Nullable;
@@ -54,7 +54,7 @@ public class ScaveranMobEntity extends Monster {
 	@Override
 	protected void registerGoals() {
 		super.registerGoals();
-		this.goalSelector.addGoal(1, new MeleeAttackGoal(this, 2, false) {
+		this.goalSelector.addGoal(1, new MeleeAttackGoal(this, 1.4, true) {
 			@Override
 			protected double getAttackReachSqr(LivingEntity entity) {
 				return this.mob.getBbWidth() * this.mob.getBbWidth() + entity.getBbWidth();
@@ -64,7 +64,6 @@ public class ScaveranMobEntity extends Monster {
 		this.targetSelector.addGoal(3, new HurtByTargetGoal(this));
 		this.targetSelector.addGoal(4, new NearestAttackableTargetGoal(this, Player.class, false, false));
 		this.targetSelector.addGoal(5, new NearestAttackableTargetGoal(this, ServerPlayer.class, false, false));
-		this.goalSelector.addGoal(6, new RandomLookAroundGoal(this));
 	}
 
 	@Override
@@ -98,12 +97,18 @@ public class ScaveranMobEntity extends Monster {
 		return retval;
 	}
 
+	@Override
+	public void baseTick() {
+		super.baseTick();
+		GleapMobOnEntityTickUpdateProcedure.execute(this.level, this);
+	}
+
 	public static void init() {
 	}
 
 	public static AttributeSupplier.Builder createAttributes() {
 		AttributeSupplier.Builder builder = Mob.createMobAttributes();
-		builder = builder.add(Attributes.MOVEMENT_SPEED, 0.18);
+		builder = builder.add(Attributes.MOVEMENT_SPEED, 0.45);
 		builder = builder.add(Attributes.MAX_HEALTH, 48);
 		builder = builder.add(Attributes.ARMOR, 0);
 		builder = builder.add(Attributes.ATTACK_DAMAGE, 8);

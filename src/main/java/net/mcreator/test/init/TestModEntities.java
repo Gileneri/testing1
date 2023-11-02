@@ -515,7 +515,7 @@ public class TestModEntities {
 	public static final RegistryObject<EntityType<TentacleClamMobEntity>> TENTACLE_CLAM_MOB = register("tentacle_clam_mob",
 			EntityType.Builder.<TentacleClamMobEntity>of(TentacleClamMobEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(128).setUpdateInterval(3).setCustomClientFactory(TentacleClamMobEntity::new)
 
-					.sized(1f, 1f));
+					.sized(0.9f, 0.9f));
 	public static final RegistryObject<EntityType<TentacleCrawlerMobEntity>> TENTACLE_CRAWLER_MOB = register("tentacle_crawler_mob",
 			EntityType.Builder.<TentacleCrawlerMobEntity>of(TentacleCrawlerMobEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(128).setUpdateInterval(3).setCustomClientFactory(TentacleCrawlerMobEntity::new)
 
